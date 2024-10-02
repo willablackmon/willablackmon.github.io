@@ -9,7 +9,7 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #6A5ACD; /* Slate Blue */
+    background-color: #4682B4; /* Slate Blue */
     padding: 20px;
     text-align: center;
 }
@@ -32,7 +32,7 @@ main {
 }
 
 .project-tile {
-    background-color: #708090; /* Slate Gray */
+    background-color: #2F4F4F; /* Dark Slate Gray */
     border-radius: 10px;
     margin: 10px;
     padding: 20px;
@@ -55,7 +55,7 @@ main {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #6A5ACD; /* Slate Blue */
+    background-color: #4682B4; /* Slate Blue */
     color: #FFFFFF; /* White */
     text-decoration: none;
     border-radius: 5px;
@@ -63,7 +63,7 @@ main {
 }
 
 .project-tile a:hover {
-    background-color: #483D8B; /* Dark Slate Blue */
+    background-color: #2F4F4F; /* Dark Slate Gray */
 }
 
 .project-tile:hover {

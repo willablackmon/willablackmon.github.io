@@ -1,38 +1,71 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
+    background-color: #2F4F4F; /* Dark Slate Gray */
+    color: #FFFFFF; /* White */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
+
+/* Header Styles */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
+    background-color: #6A5ACD; /* Slate Blue */
+    padding: 20px;
     text-align: center;
 }
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Main Content Styles */
 main {
-    padding: 2rem;
+    padding: 20px;
 }
-ul {
-    list-style-type: none;
-    padding: 0;
+
+/* Project Tiles Styles */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
-li {
-    margin: 0.5rem 0;
-}
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
-footer {
+
+.project-tile {
+    background-color: #708090; /* Slate Gray */
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
     text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: #fff;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    transition: transform 0.2s;
+}
+
+.project-tile img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.project-tile h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.project-tile a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #6A5ACD; /* Slate Blue */
+    color: #FFFFFF; /* White */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.project-tile a:hover {
+    background-color: #483D8B; /* Dark Slate Blue */
+}
+
+.project-tile:hover {
+    transform: scale(1.05);
 }

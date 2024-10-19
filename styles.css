@@ -34,4 +34,44 @@ main {
 
 .project-tile {
     display: flex;
-    align-items
+    align-items: center;
+    background-color: #4B4B4B; /* Gray */
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    transition: transform 0.2s;
+    color: #FFFFFF; /* Ensure text is white */
+}
+
+.project-tile img {
+    margin-right: 20px;
+    width: 80px; /* Resized to half */
+    height: auto;
+    object-fit: cover; /* Ensures the aspect ratio is maintained */
+}
+
+.project-tile h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.project-tile a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #1E3A5F; /* Darker Blue */
+    color: #FFFFFF; /* White */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.project-tile a:hover {
+    background-color: #2F4F4F; /* Dark Slate Gray */
+}
+
+.project-tile:hover {
+    transform: scale(1.05);
+}

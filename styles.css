@@ -43,7 +43,7 @@ main {
 }
 
 .project-tile img {
-    width: 100%; /* Full width for image inside tile */
+    width: 50%; /* Full width for image inside tile */
     height: auto;
     object-fit: cover; /* Ensures the aspect ratio is maintained */
 }

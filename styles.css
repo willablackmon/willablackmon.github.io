@@ -29,7 +29,7 @@ main {
 .projects {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center; /* Center tiles on all screen sizes */
 }
 
 .project-tile {
@@ -37,17 +37,16 @@ main {
     border-radius: 10px;
     margin: 10px;
     padding: 20px;
-    width: 200px;
+    width: calc(33.33% - 40px); /* Flex tiles to 3 per row, adjust for margin */
     text-align: center;
-    transition: transform 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s ease; /* Add box-shadow transition */
 }
 
 .project-tile img {
-    width: 160px;
+    width: 100%; /* Full width for image inside tile */
     height: auto;
     object-fit: cover; /* Ensures the aspect ratio is maintained */
 }
-
 
 .project-tile h2 {
     font-size: 1.5em;
@@ -62,13 +61,28 @@ main {
     color: #FFFFFF; /* White */
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.2s;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add smooth transitions */
 }
 
 .project-tile a:hover {
     background-color: #2F4F4F; /* Dark Slate Gray */
+    transform: scale(1.05); /* Slightly larger button on hover */
 }
 
 .project-tile:hover {
-    transform: scale(1.05);
+    transform: scale(1.08); /* Scale up tile on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+    .project-tile {
+        width: calc(50% - 40px); /* 2 tiles per row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-tile {
+        width: calc(100% - 40px); /* Full width for each tile on small screens */
+    }
 }

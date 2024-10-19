@@ -43,9 +43,11 @@ main {
 }
 
 .project-tile img {
-    max-width: 100%;
-    border-radius: 5px;
+    width: 160px;
+    height: auto;
+    object-fit: cover; /* Ensures the aspect ratio is maintained */
 }
+
 
 .project-tile h2 {
     font-size: 1.5em;

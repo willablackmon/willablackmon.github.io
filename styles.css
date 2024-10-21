@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background: url('images/') no-repeat center center fixed;
+    background: url('images/pc.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #FFFFFF; /* White */
     margin: 0;
@@ -46,20 +46,16 @@ header h1 {
 }
 
 .socials_links img {
-    height: 50px; /* Set the icon height to 50px */
+    height: 40px; /* Set the icon height to 50px */
     object-fit: contain; /* Preserve the image's aspect ratio */
+    margin-right: 10px; /* Space between icon and text  */
 }
 
 .socials_links li {
     margin-left: 10px; /* Space between social links */
 }
 
-/* Icon styles */
-.icon {
-    width: 20px; /* Set a fixed width for icons */
-    height: 20px; /* Set a fixed height for icons */
-    margin-right: 10px; /* Space between icon and text */
-}
+
 
 /* Main Content Styles */
 .projects {
@@ -114,6 +110,7 @@ header h1 {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add shadow */
     border: 3px solid #FFFFFF; /* Change border to white on hover */
 }
+
 /* Project Tile Link */
 .project-tile a {
     text-decoration: none;

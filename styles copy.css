@@ -146,35 +146,21 @@ header h1 {
 }
 
 .project-tile:nth-child(3) {
-    background-image: url('images/record_crop.jpg'); /* Music Genres */
-}
-
-.project-tile:nth-child(4) {
-    background-image: url('images/spot_crop.jpg'); /* Spotify Playlist Analysis */
-}
-
-.project-tile:nth-child(5) {
     background-image: url('images/neural_crop.jpg'); /* Neural Network, Employee Attrition */
 }
 
-.project-tile:nth-child(6) {
+.project-tile:nth-child(4) {
     background-image: url('images/pc.jpg'); /* Neural Network, Loan Predictions */
 }
 
+.project-tile:nth-child(5) {
+    background-image: url('images/trends_crop.jpg'); /* Cryptocurrencies */
+}
+
+.project-tile:nth-child(6) {
+    background-image: url('images/record_crop.jpg'); /* Music Genres */
+}
+
 .project-tile:nth-child(7) {
-    background-image: url('images/trends_crop.jpg'); /* Crypto Clustering */
+    background-image: url('images/spot_crop.jpg'); /* Spotify Playlist Analysis */
 }
-
-.project-tile:nth-child(8) {
-    background-image: url('images/stock.jpg'); /* Forecasting Stock Trends */
-}
-
-.project-tile:nth-child(9) {
-    background-image: url('images/movies.jpg'); /* Movie Reviews */
-}
-
-.project-tile:nth-child(10) {
-    background-image: url('images/sales.jpg'); /* Athletic Sales */
-}
-
-

@@ -1,11 +1,17 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Calibri', sans-serif;
     background: url('images/pc_gradient.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #FFFFFF; /* White */
+    color: #000000; /* Black text */
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Ensure padding and border are included in element width and height */
+}
+
+a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Ensures that the color remains the same as the surrounding text */
 }
 
 /* Header Styles */
@@ -18,22 +24,15 @@ header {
 .header-content {
     display: flex;
     align-items: center;
-    margin-left: 0.25in; /* Adjust the spacing as needed */
+    justify-content: left; /* Align to the left */
+    margin-left: 1.5in; /* Adjust the spacing as needed */
 }
-
 
 header h1 {
     margin-top: 0; /* Remove the top margin to prevent pushing the text up */
     font-size: 1.8em; /* Adjusted font size */
     color: #ffffff; /* White text */
     margin-left: 10px; /* Space between the Octocat and name */
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: left; /* Center the content horizontally */
-    margin-left: 1.5in; /* Adjust the spacing as needed */
 }
 
 .socials_links {
@@ -46,7 +45,7 @@ header h1 {
 }
 
 .socials_links img {
-    height: 40px; /* Set the icon height to 50px */
+    height: 40px; /* Set the icon height */
     object-fit: contain; /* Preserve the image's aspect ratio */
     margin-right: 10px; /* Space between icon and text  */
 }
@@ -55,126 +54,80 @@ header h1 {
     margin-left: 10px; /* Space between social links */
 }
 
-
-
-/* Adjust the projects container to use Grid */
+/* Project Grid Layout */
 .projects {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
-    grid-gap: 20px; /* Gap between the tiles */
-    margin: 0; /* Reset margin */
-    padding: 10px 1in; /* 1 inch buffer on the left and right */
-    padding-top: 0.5in; /* 1 inch buffer from the top */
+    grid-template-columns: repeat(3, 1fr); /* Three fixed columns */
+    gap: 15px; /* Reduced space between the tiles */
+    padding: 15px; /* Reduced padding around the project grid */
 }
 
-/* Ensure consistent sizing of the tiles */
 .project-tile {
-    background-color: #4B4B4B;
+    background-color: #ffffff;
+    padding: 10px; /* Adjusted padding for a tighter layout */
+    margin: 5px; /* Reduced margin to bring tiles closer together */
     border-radius: 10px;
-    padding: 15px;
-    height: 250px; /* Fixed height */
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s ease, border 0.2s ease;
-    border: 3px solid black;
-    position: relative;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 280px; /* Reduced width for a more compact design */
+    height: 400px; /* Reduced height for a shorter tile */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    font-family: 'Calibri', sans-serif;
+    border: 5px solid black; /* Thick black border around each tile */
+    transition: border-color 0.3s ease-in-out;
 }
 
-/* For tablets (2 tiles per row) */
-@media (max-width: 768px) {
-    .projects {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
-        padding: 10px 1in; /* Maintain left and right buffer */
-    }
+.project-tile img {
+    width: 100%; /* Set width to 100% of the container */
+    height: 140px; /* 30% shorter than the original height */
+    object-fit: cover; /* Ensure the image covers the area without being distorted */
+    object-position: center; /* Keep the image centered */
+    border-radius: 10px;
+    margin-bottom: 5px; /* Reduced margin between image and title */
+    border: 3px solid black; /* Black frame around the image */
 }
 
-/* For mobile devices (1 tile per row) */
-@media (max-width: 480px) {
-    .projects {
-        grid-template-columns: repeat(1, 1fr); /* Full-width tile for mobile */
-        padding: 10px 1in; /* Maintain left and right buffer */
-    }
-}
-
-/* Headline (h2) Styles */
 .project-tile h2 {
-    font-size: 1.2em;
-    margin: 10px 0;
-    transition: color 0.3s ease;
-    background-color: #1E3A5F; /* Solid dark blue background */
-    color: #FFFFFF; /* Keep text white */
-    padding: 10px; /* Keep padding for the text */
-    border-radius: 10px; /* Rounded corners */
-    max-height: 3.6em; /* Allow for approximately 2 lines of text */
-    line-height: 1.8em; /* Line height for spacing */
-    overflow: hidden; /* Hide overflow to keep layout consistent */
-    text-overflow: ellipsis; /* Add ellipsis if text is too long */
-    white-space: normal; /* Allow wrapping of text */
+    font-size: 1.2em; /* Same font size */
+    margin: 5px 0; /* Reduced margin for tighter fit */
+    padding: 8px; /* Adjusted padding for compactness */
+    background-color: #1E3A5F; /* Dark blue background */
+    color: #FFFFFF;
+    font-weight: bold;
+    border-radius: 10px;
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.4em;
+    text-align: center;
+    border: 2px solid black; /* Thin black border around h2 bubble */
+    transition: border 0.3s ease-in-out; /* Transition for border when hovering */
 }
 
-/* Description Styles */
 .project-tile p {
-    background-color: #000000; /* Black background for description */
-    color: #FFFFFF; /* White text */
-    padding: 10px; /* Padding for description text */
-    border-radius: 10px; /* Rounded corners */
+    font-size: 1.1em; /* Slightly adjusted paragraph font size */
+    margin: 5px 0; /* Reduced margins for a tighter layout */
+    color: #000000;
+    padding: 5px 0;
+    text-align: left;
+    line-height: 1.6;
+    word-wrap: break-word;
+    font-family: 'Calibri', sans-serif;
 }
 
-/* Pane hover effects */
-.project-tile:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add shadow */
-    border: 3px solid #FFFFFF; /* Change border to white on hover */
-}
-
-/* Project Tile Link */
 .project-tile a {
-    text-decoration: none;
+    text-decoration: none; /* Removes underline from links */
     color: inherit;
-    display: block; /* Make the link cover the whole panel */
-    height: 100%; /* Ensure the link covers the height of the panel */
 }
 
-/* Background images for each pane */
-.project-tile:nth-child(1) {
-    background-image: url('images/ref_crop.jpg'); /* NFL Predictions */
+/* Hover effect: Change the tile border color to the blue behind the h2 headers */
+.project-tile:hover {
+    border-color: #1E3A5F; /* Tile border turns to the same blue as the h2 background on hover */
 }
 
-.project-tile:nth-child(2) {
-    background-image: url('images/text_crop.jpg'); /* SMS Classification */
+/* Add heavy black frame around h2 when hovering */
+.project-tile:hover h2 {
+    border: 5px solid black; /* Heavy black frame around the h2 on hover */
 }
-
-.project-tile:nth-child(3) {
-    background-image: url('images/record_crop.jpg'); /* Music Genres */
-}
-
-.project-tile:nth-child(4) {
-    background-image: url('images/spot_crop.jpg'); /* Spotify Playlist Analysis */
-}
-
-.project-tile:nth-child(5) {
-    background-image: url('images/neural_crop.jpg'); /* Neural Network, Employee Attrition */
-}
-
-.project-tile:nth-child(6) {
-    background-image: url('images/pc.jpg'); /* Neural Network, Loan Predictions */
-}
-
-.project-tile:nth-child(7) {
-    background-image: url('images/trends_crop.jpg'); /* Crypto Clustering */
-}
-
-.project-tile:nth-child(8) {
-    background-image: url('images/stock.jpg'); /* Forecasting Stock Trends */
-}
-
-.project-tile:nth-child(9) {
-    background-image: url('images/movies.jpg'); /* Movie Reviews */
-}
-
-.project-tile:nth-child(10) {
-    background-image: url('images/sales.jpg'); /* Athletic Sales */
-}
-
-

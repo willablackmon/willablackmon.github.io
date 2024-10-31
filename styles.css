@@ -68,7 +68,8 @@ header h1 {
     margin: 5px; /* Reduced margin to bring tiles closer together */
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    align-items: center;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -86,14 +87,17 @@ header h1 {
     border-radius: 10px;
     margin-bottom: 5px; /* Reduced margin between image and title */
     border: 3px solid black; /* Black frame around the image */
+    margin: 0; /* Remove any margin to align precisely with h2 */
     transition: transform 0.3s ease-in-out;
 }
 
 /* Keep only the hover effect for the image */
 .project-tile:hover img,
 .project-tile:hover h2 {
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
+    width: 100%; /* Makes both image and title bubble span the full width of the tile */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+    transform: scale(1.05);
+    transition: transform 0.4s ease-in-out;
 }
 
 .project-tile h2 {

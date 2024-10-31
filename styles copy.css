@@ -82,7 +82,7 @@ header h1 {
 
 .project-tile img {
     width: 100%; /* Set width to 100% of the container */
-    height: 140px; /* 30% shorter than the original height */
+    height: auto; /* 30% shorter than the original height */
     object-fit: cover; /* Ensure the image covers the area without being distorted */
     object-position: center; /* Keep the image centered */
     border-radius: 10px;
@@ -130,4 +130,24 @@ header h1 {
 /* Add heavy black frame around h2 when hovering */
 .project-tile:hover h2 {
     border: 5px solid black; /* Heavy black frame around the h2 on hover */
+}
+
+/* For screens that are 600px wide or smaller (e.g., iPhones) */
+@media (max-width: 600px) {
+    .projects {
+        grid-template-columns: repeat(1, 1fr); /* Stack tiles one by one */
+    }
+
+    .project-tile {
+        padding: 8px;
+        margin: 5px;
+    }
+
+    .project-tile img {
+        height: 120px; /* Adjust image height for small screens */
+    }
+
+    .project-tile h2 {
+        font-size: 1.2em; /* Slightly smaller font for small screens */
+    }
 }

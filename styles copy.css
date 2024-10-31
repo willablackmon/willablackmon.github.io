@@ -135,19 +135,19 @@ header h1 {
 /* For screens that are 600px wide or smaller (e.g., iPhones) */
 @media (max-width: 600px) {
     .projects {
-        grid-template-columns: repeat(1, 1fr); /* Stack tiles one by one */
+        grid-template-columns: 1fr; /* Stack the tiles in a single column */
     }
 
     .project-tile {
-        padding: 8px;
-        margin: 5px;
+        margin: 10px 0; /* Increase the vertical margin between tiles */
+        padding: 8px; /* Adjust the padding to fit smaller screens */
     }
 
     .project-tile img {
-        height: 120px; /* Adjust image height for small screens */
+        height: 120px; /* Reduce image height for smaller screens */
     }
 
     .project-tile h2 {
-        font-size: 1.2em; /* Slightly smaller font for small screens */
+        font-size: 1.3em; /* Slightly reduce the title size */
     }
 }

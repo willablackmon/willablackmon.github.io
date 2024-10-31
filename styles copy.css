@@ -18,7 +18,7 @@ a {
 header {
     background-color: #24292e; /* GitHub dark gray */
     padding: 10px 20px; /* Reduced padding for height adjustment */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increased shadow for better visual impact */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .header-content {
@@ -45,22 +45,21 @@ header h1 {
 }
 
 .socials_links img {
-    height: 30px; /* Adjusted height */
-    margin: 0 10px; /* Uniform spacing */
-    vertical-align: middle; /* Ensure vertical alignment with text */
+    height: 40px; /* Set the icon height */
     object-fit: contain; /* Preserve the image's aspect ratio */
+    margin-right: 10px; /* Space between icon and text  */
 }
 
 .socials_links li {
     margin-left: 10px; /* Space between social links */
 }
 
-/* Project Grid Layout for Various Screen Sizes */
+/* Project Grid Layout */
 .projects {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Limit to 4 tiles per row */
-    gap: 15px; 
-    padding: 15px; 
+    grid-template-columns: repeat(3, 1fr); /* Three fixed columns */
+    gap: 15px; /* Reduced space between the tiles */
+    padding: 15px; /* Reduced padding around the project grid */
 }
 
 .project-tile {
@@ -70,13 +69,15 @@ header h1 {
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: left;
+    width: 280px; /* Reduced width for a more compact design */
+    height: 400px; /* Reduced height for a shorter tile */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
     font-family: 'Calibri', sans-serif;
     border: 5px solid black; /* Thick black border around each tile */
-    /* Remove the transition for the tile's border color */
+    transition: border-color 0.3s ease-in-out;
 }
 
 .project-tile img {
@@ -87,18 +88,10 @@ header h1 {
     border-radius: 10px;
     margin-bottom: 5px; /* Reduced margin between image and title */
     border: 3px solid black; /* Black frame around the image */
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Keep only the hover effect for the image */
-.project-tile:hover img,
-.project-tile:hover h2 {
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
 }
 
 .project-tile h2 {
-    font-size: 1.5em; /* Same font size */
+    font-size: 1.2em; /* Same font size */
     margin: 5px 0; /* Reduced margin for tighter fit */
     padding: 8px; /* Adjusted padding for compactness */
     background-color: #1E3A5F; /* Dark blue background */
@@ -116,7 +109,7 @@ header h1 {
 .project-tile p {
     font-size: 1.1em; /* Slightly adjusted paragraph font size */
     margin: 5px 0; /* Reduced margins for a tighter layout */
-    color: #333333; /* Use a dark gray instead of pure black for better readability */
+    color: #000000;
     padding: 5px 0;
     text-align: left;
     line-height: 1.6;
@@ -129,12 +122,12 @@ header h1 {
     color: inherit;
 }
 
-/*
+/* Hover effect: Change the tile border color to the blue behind the h2 headers */
 .project-tile:hover {
-    border-color: #1E3A5F; 
+    border-color: #1E3A5F; /* Tile border turns to the same blue as the h2 background on hover */
 }
 
+/* Add heavy black frame around h2 when hovering */
 .project-tile:hover h2 {
-    border: 5px solid black;  
+    border: 5px solid black; /* Heavy black frame around the h2 on hover */
 }
-*/

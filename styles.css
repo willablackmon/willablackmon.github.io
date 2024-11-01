@@ -57,7 +57,7 @@ header h1 {
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive layout with minimum width */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive layout with minimum width */
     gap: 15px; 
     padding: 15px;
 }
@@ -117,7 +117,7 @@ header h1 {
 }
 
 .project-tile p {
-    font-size: 1.1em; /* Slightly adjusted paragraph font size */
+    font-size: 0.9em; /* Slightly adjusted paragraph font size */
     margin: 5px 0; /* Reduced margins for a tighter layout */
     color: #333333; /* Use a dark gray instead of pure black for better readability */
     padding: 5px 0;

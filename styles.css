@@ -45,7 +45,7 @@ header h1 {
 }
 
 .socials_links img {
-    height: 30px; /* Adjusted height */
+    height: 50px; /* Adjusted height */
     margin: 0 10px; /* Uniform spacing */
     vertical-align: middle; /* Ensure vertical alignment with text */
     object-fit: contain; /* Preserve the image's aspect ratio */

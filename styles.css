@@ -30,7 +30,9 @@ header {
 }
 
 .title-container {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;  /* Stack title and subtitle vertically */
+    align-items: center;     /* Center-align title and subtitle */
 }
 
 header h1 {
@@ -149,18 +151,16 @@ header h1 {
 /* Responsive Adjustments for Smaller Screens */
 @media (max-width: 600px) {
     .header-content {
-        flex-direction: column;
-        align-items: center;
-        margin-left: 0; /* Remove left margin to center-align */
+        flex-direction: column;  /* Stack items vertically on small screens */
+        align-items: center;     /* Center-align all items in the header */
     }
-    
+
     .socials_links {
-        margin-left: 0; /* Center-align social links on smaller screens */
-        margin-top: 10px; /* Add some spacing between title and social links */
+        margin-top: 10px; /* Adds space between title area and social icons */
     }
-    
+
     header h1, .title-subtitle {
-        text-align: center;
+        text-align: center; /* Center-align text on small screens */
     }
 }
 

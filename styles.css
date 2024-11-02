@@ -28,11 +28,21 @@ header {
     margin-left: 1.5in; /* Adjust the spacing as needed */
 }
 
+.title-container {
+    display: inline-block;
+}
+
 header h1 {
     margin-top: 0; /* Remove the top margin to prevent pushing the text up */
     font-size: 1.8em; /* Adjusted font size */
     color: #ffffff; /* White text */
     margin-left: 10px; /* Space between the Octocat and name */
+}
+
+.title-subtitle {
+    font-size: 0.9em; /* Smaller font size for subtitle */
+    color: #dddddd; /* Light gray text */
+    margin-top: 0; /* Remove top margin to align closely with main title */
 }
 
 .socials_links {
@@ -45,7 +55,7 @@ header h1 {
 }
 
 .socials_links img {
-    height: 50px; /* Adjusted height */
+    height: 45px; /* Adjusted height to match the updated layout */
     margin: 0 10px; /* Uniform spacing */
     vertical-align: middle; /* Ensure vertical alignment with text */
     object-fit: contain; /* Preserve the image's aspect ratio */
@@ -55,6 +65,9 @@ header h1 {
     margin-left: 10px; /* Space between social links */
 }
 
+
+
+/* Project Tiles */
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive layout with minimum width */

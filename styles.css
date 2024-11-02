@@ -21,11 +21,12 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increased shadow for better visual impact */
 }
 
+/* General Header Styles */
 .header-content {
     display: flex;
     align-items: center;
-    justify-content: left; /* Align to the left */
-    margin-left: 1.5in; /* Adjust the spacing as needed */
+    justify-content: left;
+    margin-left: 1.5in; /* Adjust as needed */
 }
 
 .title-container {
@@ -33,16 +34,16 @@ header {
 }
 
 header h1 {
-    margin-top: 0; /* Remove the top margin to prevent pushing the text up */
-    font-size: 1.8em; /* Adjusted font size */
-    color: #ffffff; /* White text */
-    margin-left: 10px; /* Space between the Octocat and name */
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #ffffff;
+    margin-left: 10px;
 }
 
 .title-subtitle {
-    font-size: 0.9em; /* Smaller font size for subtitle */
-    color: #dddddd; /* Light gray text */
-    margin-top: 0; /* Remove top margin to align closely with main title */
+    font-size: 0.9em;
+    color: #dddddd;
+    margin-top: 0;
 }
 
 .socials_links {
@@ -51,14 +52,14 @@ header h1 {
     padding: 0;
     margin: 0;
     margin-left: 1in;
-    align-items: center; /* Align the icons vertically with the text */
+    align-items: center;
 }
 
 .socials_links img {
-    height: 45px; /* Adjusted height to match the updated layout */
-    margin: 0 10px; /* Uniform spacing */
-    vertical-align: middle; /* Ensure vertical alignment with text */
-    object-fit: contain; /* Preserve the image's aspect ratio */
+    height: 39px; /* Increased by 30% */
+    margin: 0 10px;
+    vertical-align: middle;
+    object-fit: contain;
 }
 
 .socials_links li {
@@ -145,22 +146,21 @@ header h1 {
     color: inherit;
 }
 
+/* Responsive Adjustments for Smaller Screens */
 @media (max-width: 600px) {
-    .projects {
-        grid-template-columns: 1fr; /* Stack the tiles in a single column */
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0; /* Remove left margin to center-align */
     }
-
-    .project-tile {
-        margin: 10px 0; /* Increase the vertical margin between tiles */
-        padding: 8px; /* Adjust the padding to fit smaller screens */
+    
+    .socials_links {
+        margin-left: 0; /* Center-align social links on smaller screens */
+        margin-top: 10px; /* Add some spacing between title and social links */
     }
-
-    .project-tile img {
-        height: 120px; /* Reduce image height for smaller screens */
-    }
-
-    .project-tile h2 {
-        font-size: 1.3em; /* Slightly reduce the title size */
+    
+    header h1, .title-subtitle {
+        text-align: center;
     }
 }
 

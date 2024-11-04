@@ -148,21 +148,28 @@ header h1 {
     color: inherit;
 }
 
+
+
 @media (max-width: 600px) {
     .header-content {
         width: 100%;
         flex-direction: column;
         align-items: center;
         justify-content: center; /* Centers items horizontally */
-        margin-left: 0; /* Remove the left margin to center the content */
+        margin: 0;
+        /* margin-left: 0;  Remove the left margin to center the content */
+        padding: 20px 0; /* padding to top/bottom */
     }
 
     header {
         text-align: center; /* Center the header content */
         padding: 0 10px; /*adjust padding to prevent overflow.*/
+        padding: 20px 0; /* padding to top/bottom */
     }
 
     .socials_links {
+        display: flex;
+        justify-content: center; /*center socials*/
         margin-top: 10px;
     }
 

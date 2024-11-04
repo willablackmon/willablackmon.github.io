@@ -155,21 +155,20 @@ header h1 {
         width: 100%;
         flex-direction: column;
         align-items: center;
-        justify-content: center; /* Centers items horizontally */
+        justify-content: center;
         margin: 0;
-        /* margin-left: 0;  Remove the left margin to center the content */
-        padding: 20px 0; /* padding to top/bottom */
+        padding: 20px 0;
     }
 
     header {
-        text-align: center; /* Center the header content */
-        padding: 0 10px; /*adjust padding to prevent overflow.*/
-        padding: 20px 0; /* padding to top/bottom */
+        text-align: center;
+        padding: 20px 10px;
     }
 
     .socials_links {
+        width: 100%; /* Ensure full width for centering */
         display: flex;
-        justify-content: center; /*center socials*/
+        justify-content: center; /* Center socials */
         margin-top: 10px;
     }
 

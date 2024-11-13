@@ -17,62 +17,76 @@ a {
 /* Header Styles */
 header {
     background-color: #24292e; /* GitHub dark gray */
-    padding: 10px 20px; /* Reduced padding for height adjustment */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increased shadow for better visual impact */
+    padding: 20px; /* Added padding for more space */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Centers content within the header */
 }
 
-/* General Header Styles */
 .header-content {
     display: flex;
     align-items: center;
-    justify-content: left;
-    margin-left: 1.5in; /* Adjust as needed */
+    justify-content: center; /* Center-aligns the header content */
+    gap: 15px; /* Adds space between the image and title container */
+}
+
+.header-content img {
+    height: 70px;
+    border-radius: 50%; /* Optional: makes the image circular */
 }
 
 .title-container {
-    display: flex;
-    flex-direction: column;  /* Stack title and subtitle vertically */
-    align-items: center;     /* Center-align title and subtitle */
+    text-align: center; /* Centers text within the container */
 }
 
 header h1 {
-    margin-top: 0;
+    margin: 0;
     font-size: 1.8em;
     color: #ffffff;
-    margin-left: 10px;
 }
 
 .title-subtitle {
     font-size: 0.9em;
     color: #dddddd;
-    margin-top: 0;
+    margin-top: 5px;
 }
 
-.socials_links {
-    display: inline-flex;
+/* Introductory Section Styles */
+.intro {
+    background-color: #ffffff;
+    padding: 5px 10px; /* Reduced padding for a tighter layout */
+    margin: 10px auto; /* Centers the intro section with equal spacing on top and bottom */
+    max-width: 1100px; /* Matches the width of the tiles container */
+    border-radius: 10px;
+    border: 5px solid #1E3A5F; /* Dark blue frame around the intro section */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 1.4;
+    color: #333333;
+}
+
+/* Social Links Centered in Intro Section */
+.intro .socials_links {
+    display: flex;
+    justify-content: center;
     list-style: none;
-    padding: 0;
-    margin: 0;
-    margin-left: 1in;
-    align-items: center;
+    padding: 5px 0 0 0; /* Reduced padding above the icons */
+    margin-top: 10px; /* Reduced spacing between text and icons */
 }
 
-.socials_links img {
-    height: 39px; /* Increased by 30% */
-    margin: 0 10px;
-    vertical-align: middle;
+.intro .socials_links li {
+    margin: 0 8px; /* Less space between icons */
+}
+
+.intro .socials_links img {
+    height: 30px; /* Smaller icons */
     object-fit: contain;
 }
-
-.socials_links li {
-    margin-left: 10px; /* Space between social links */
-}
-
-
 
 /* Project Tiles */
 .projects {
     display: grid;
+    margin-top: 10px; /* Reduce space between intro and tiles */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive layout with minimum width */
     gap: 15px; 
     padding: 15px;

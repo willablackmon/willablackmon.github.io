@@ -54,7 +54,7 @@ header h1 {
 .intro {
     background-color: #ffffff;
     padding: 5px 10px; /* Reduced padding for a tighter layout */
-    margin: 10px auto; /* Centers the intro section with equal spacing on top and bottom */
+    margin: 4px auto; /* Centers the intro section with equal spacing on top and bottom */
     max-width: 1000px; /* Matches the width of the tiles container */
     border-radius: 10px;
     border: 5px solid #1E3A5F; /* Dark blue frame around the intro section */
@@ -75,11 +75,11 @@ header h1 {
 }
 
 .intro .socials_links li {
-    margin: 0 8px; /* Less space between icons */
+    margin: 0 10px; /* Less space between icons */
 }
 
 .intro .socials_links img {
-    height: 30px; /* Smaller icons */
+    height: 40px; /* Smaller icons */
     object-fit: contain;
 }
 
@@ -147,7 +147,7 @@ header h1 {
 }
 
 .project-tile p {
-    font-size: 1.2em; /* Slightly adjusted paragraph font size */
+    font-size: 1.1em; /* Slightly adjusted paragraph font size */
     margin: 5px 0; /* Reduced margins for a tighter layout */
     color: #333333; /* Use a dark gray instead of pure black for better readability */
     padding: 5px 0;

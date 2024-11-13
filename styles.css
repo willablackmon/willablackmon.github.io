@@ -45,7 +45,7 @@ header h1 {
 }
 
 .title-subtitle {
-    font-size: 1.2em;
+    font-size: 1.5em;
     color: #dddddd;
     margin-top: 5px;
 }
@@ -55,7 +55,7 @@ header h1 {
     background-color: #ffffff;
     padding: 5px 10px; /* Reduced padding for a tighter layout */
     margin: 10px auto; /* Centers the intro section with equal spacing on top and bottom */
-    max-width: 1100px; /* Matches the width of the tiles container */
+    max-width: 1000px; /* Matches the width of the tiles container */
     border-radius: 10px;
     border: 5px solid #1E3A5F; /* Dark blue frame around the intro section */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -87,7 +87,7 @@ header h1 {
 .projects {
     display: grid;
     margin-top: 10px; /* Reduce space between intro and tiles */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive layout with minimum width */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive layout with minimum width */
     gap: 15px; 
     padding: 15px;
 }
@@ -147,7 +147,7 @@ header h1 {
 }
 
 .project-tile p {
-    font-size: 1.0em; /* Slightly adjusted paragraph font size */
+    font-size: 1.2em; /* Slightly adjusted paragraph font size */
     margin: 5px 0; /* Reduced margins for a tighter layout */
     color: #333333; /* Use a dark gray instead of pure black for better readability */
     padding: 5px 0;

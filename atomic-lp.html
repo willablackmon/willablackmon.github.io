@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Atomic LP Scanner project overview and walkthroughs by Will Blackmon.">
+    <title>Atomic LP Scanner | Will Blackmon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/photo.jpg" alt="Will Blackmon">
+            <div class="title-container">
+                <h1>Will Blackmon</h1>
+                <p class="title-subtitle">Software Development, Data &amp; AI Projects</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="detail-page">
+        <nav class="detail-nav"><a href="index.html">&larr; Back to Portfolio</a></nav>
+
+        <section class="detail-hero">
+            <div class="detail-hero-image">
+                <img src="images/atomic-lp-banner-wide.png" alt="Atomic LP Scanner artwork">
+            </div>
+            <div class="detail-hero-copy">
+                <p class="eyebrow">2026–PRESENT · INDEPENDENT DEVELOPMENT</p>
+                <h2>Atomic LP Scanner</h2>
+                <p class="project-lead">Record album discovery, metadata, release research, and collection workflow.</p>
+                <p>
+                    Atomic LP is a full-stack web application for identifying and researching vinyl records using
+                    barcode, catalog number, artist, and album searches. It combines information from multiple music-data
+                    services to help resolve album identities, compare vinyl releases and pressings, review marketplace
+                    information, and save likely matches.
+                </p>
+                <div class="project-actions">
+                    <!-- Replace # with the public Render URL when ready. -->
+                    <a class="button primary" href="https://lp-scanner.onrender.com/" target="_blank" rel="noopener noreferrer">Try the Live App</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="detail-section">
+            <div class="section-heading">
+                <p class="eyebrow">PROJECT OVERVIEW</p>
+                <h2>How It Works</h2>
+            </div>
+            <div class="detail-card">
+                <p>
+                    A search begins with a barcode, catalog number, or artist and album. Atomic LP coordinates multiple
+                    external data services to identify the album, resolve the appropriate vinyl release family, and present
+                    release details that can be compared and filtered. The application also maintains persistent user data
+                    and supports workflows for saving likely matches and returning to them later.
+                </p>
+                <p>
+                    The backend is built with Python and Flask, with PostgreSQL and SQLAlchemy for persistence. The browser
+                    interface uses JavaScript, HTML, and CSS. Development has included entity matching, API orchestration,
+                    caching, provider rate-limit handling, performance instrumentation, error recovery, automated regression
+                    testing, and responsive browser workflows.
+                </p>
+                <p class="tools"><strong>Key Tools:</strong> Python, Flask, JavaScript, PostgreSQL, SQLAlchemy, REST APIs,
+                    JSON, Discogs, MusicBrainz, OAuth, pytest, Gunicorn, Render.</p>
+                <p class="source-note"><strong>Source repository:</strong> Private.</p>
+            </div>
+        </section>
+
+        <section class="detail-section">
+            <div class="section-heading">
+                <p class="eyebrow">WALKTHROUGHS</p>
+                <h2>How To Use Atomic LP</h2>
+                <p class="section-copy">Short animated walkthroughs will demonstrate common search and record-research scenarios.</p>
+            </div>
+
+            <div class="howto-list">
+                <article class="howto-row">
+                    <div class="gif-placeholder" role="img" aria-label="Placeholder for How To 1 animated walkthrough">
+                        <span>HOW TO 1</span>
+                        <strong>Animated Walkthrough</strong>
+                        <small>GIF placeholder · 16:9</small>
+                    </div>
+                    <div class="howto-copy">
+                        <h3>How To 1</h3>
+                        <p>Add the scenario title and a short explanation of what the walkthrough demonstrates.</p>
+                    </div>
+                </article>
+
+                <article class="howto-row">
+                    <div class="gif-placeholder" role="img" aria-label="Placeholder for How To 2 animated walkthrough">
+                        <span>HOW TO 2</span>
+                        <strong>Animated Walkthrough</strong>
+                        <small>GIF placeholder · 16:9</small>
+                    </div>
+                    <div class="howto-copy">
+                        <h3>How To 2</h3>
+                        <p>Add the scenario title and a short explanation of what the walkthrough demonstrates.</p>
+                    </div>
+                </article>
+
+                <article class="howto-row">
+                    <div class="gif-placeholder" role="img" aria-label="Placeholder for How To 3 animated walkthrough">
+                        <span>HOW TO 3</span>
+                        <strong>Animated Walkthrough</strong>
+                        <small>GIF placeholder · 16:9</small>
+                    </div>
+                    <div class="howto-copy">
+                        <h3>How To 3</h3>
+                        <p>Add the scenario title and a short explanation of what the walkthrough demonstrates.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

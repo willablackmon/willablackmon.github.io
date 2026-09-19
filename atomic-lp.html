@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Atomic LP Scanner project overview and walkthroughs by Will Blackmon.">
+    <meta name="description" content="Atomic LP Scanner: a full-stack vinyl album discovery, release research, marketplace, and collection application built by Will Blackmon.">
     <title>Atomic LP Scanner | Will Blackmon</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -28,15 +28,13 @@
             <div class="detail-hero-copy">
                 <p class="eyebrow">2026–PRESENT · INDEPENDENT DEVELOPMENT</p>
                 <h2>Atomic LP Scanner</h2>
-                <p class="project-lead">Record album discovery, metadata, release research, and collection workflow.</p>
+                <p class="project-lead">Vinyl album identification, release research, marketplace, and collection workflow.</p>
                 <p>
-                    Atomic LP is a full-stack web application for identifying and researching vinyl records using
-                    barcode, catalog number, artist, and album searches. It combines information from multiple music-data
-                    services to help resolve album identities, compare vinyl releases and pressings, review marketplace
-                    information, and save likely matches.
+                    Atomic LP Scanner is a full-stack web application built to make the process of identifying a physical
+                    record and narrowing it to the most useful vinyl release information faster. A search can start from
+                    a barcode, catalog number, artist, album, or a combination of those inputs.
                 </p>
                 <div class="project-actions">
-                    <!-- Replace # with the public Render URL when ready. -->
                     <a class="button primary" href="https://lp-scanner.onrender.com/" target="_blank" rel="noopener noreferrer">Try the Live App</a>
                 </div>
             </div>
@@ -45,20 +43,92 @@
         <section class="detail-section">
             <div class="section-heading">
                 <p class="eyebrow">PROJECT OVERVIEW</p>
-                <h2>How It Works</h2>
+                <h2>From Record in Hand to Release Candidates</h2>
             </div>
             <div class="detail-card">
                 <p>
-                    A search begins with a barcode, catalog number, or artist and album. Atomic LP coordinates multiple
-                    external data services to identify the album, resolve the appropriate vinyl release family, and present
-                    release details that can be compared and filtered. The application also maintains persistent user data
-                    and supports workflows for saving likely matches and returning to them later.
+                    Vinyl research often begins with incomplete or inconsistent clues: a barcode, a catalog number,
+                    an artist and title, or a record whose packaging does not uniquely identify a pressing. Atomic LP
+                    coordinates multiple music-data services to resolve the album identity, surface plausible matches,
+                    and organize the resulting vinyl-release information into a single browser workflow.
                 </p>
                 <p>
+                    Clear searches can continue directly into release research. When more than one album identity is
+                    plausible, the application presents Possible Matches so the user can choose the correct album before
+                    deeper release work begins. The resulting workflow brings together artwork, release metadata,
+                    marketplace information, external album resources, and user-selected records without requiring the
+                    user to repeat the same search across multiple sites.
+                </p>
+            </div>
+        </section>
+
+        <section class="detail-section">
+            <div class="section-heading">
+                <p class="eyebrow">CAPABILITIES</p>
+                <h2>What the Application Does</h2>
+            </div>
+            <div class="capability-grid">
+                <article class="capability-card">
+                    <h3>Flexible Record Search</h3>
+                    <p>Search by barcode, catalog ID, artist + album, artist only, or album only, with browser-based scan/upload workflows for record identification.</p>
+                </article>
+                <article class="capability-card">
+                    <h3>Possible Match Resolution</h3>
+                    <p>Ambiguous results are presented as candidate albums with supporting metadata so a user can select the best match instead of accepting a weak automatic guess.</p>
+                </article>
+                <article class="capability-card">
+                    <h3>Vinyl Release Research</h3>
+                    <p>Resolve an album to its vinyl release family, compare available pressings, inspect release details, and filter out formats that are outside the LP workflow.</p>
+                </article>
+                <article class="capability-card">
+                    <h3>Marketplace &amp; External Resources</h3>
+                    <p>Bring marketplace information and supporting album links into the same research workflow, including artwork and links to additional music and shopping resources when available.</p>
+                </article>
+                <article class="capability-card">
+                    <h3>Discogs Collection &amp; WantList</h3>
+                    <p>Users can connect a Discogs account and search or compare results against their own Collection and WantList without mixing personal library data into the public search workflow.</p>
+                </article>
+                <article class="capability-card">
+                    <h3>Save &amp; Export</h3>
+                    <p>Keep selected releases in a session list or persistent user library and export saved release information for later research and comparison.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="detail-section">
+            <div class="section-heading">
+                <p class="eyebrow">SECURITY &amp; CONNECTED ACCOUNTS</p>
+                <h2>Personal Discogs Integration</h2>
+            </div>
+            <div class="detail-card">
+                <p>
+                    Public album research does not require access to a user's personal Discogs data. Collection and
+                    WantList features are enabled separately through OAuth authorization. Connected-account tokens are
+                    stored encrypted on the server and are not exposed in browser code.
+                </p>
+                <p>
+                    This separation allows Atomic LP to use public music metadata for general discovery while adding
+                    personalized Collection and WantList workflows only for users who explicitly connect an account.
+                </p>
+            </div>
+        </section>
+
+        <section class="detail-section">
+            <div class="section-heading">
+                <p class="eyebrow">ENGINEERING</p>
+                <h2>Built as a Stateful Multi-Service Workflow</h2>
+            </div>
+            <div class="detail-card">
+                <p>
                     The backend is built with Python and Flask, with PostgreSQL and SQLAlchemy for persistence. The browser
-                    interface uses JavaScript, HTML, and CSS. Development has included entity matching, API orchestration,
-                    caching, provider rate-limit handling, performance instrumentation, error recovery, automated regression
-                    testing, and responsive browser workflows.
+                    interface uses JavaScript, HTML, and CSS. The application coordinates several external data services while
+                    managing provider limits, partial results, slow responses, and alternate discovery paths.
+                </p>
+                <p>
+                    Development has focused on identity matching, API orchestration, caching, rate-limit awareness,
+                    cancellation and stale-result protection, performance instrumentation, responsive mobile behavior,
+                    error recovery, and automated regression testing. New searches, STOP, and CLEAR ALL supersede work from
+                    prior searches so late responses cannot overwrite the current record.
                 </p>
                 <p class="tools"><strong>Key Tools:</strong> Python, Flask, JavaScript, PostgreSQL, SQLAlchemy, REST APIs,
                     JSON, Discogs, MusicBrainz, OAuth, pytest, Gunicorn, Render.</p>
@@ -70,43 +140,43 @@
             <div class="section-heading">
                 <p class="eyebrow">WALKTHROUGHS</p>
                 <h2>How To Use Atomic LP</h2>
-                <p class="section-copy">Short animated walkthroughs will demonstrate common search and record-research scenarios.</p>
+                <p class="section-copy">Short animated walkthroughs will be added here for the three primary workflows.</p>
             </div>
 
             <div class="howto-list">
                 <article class="howto-row">
-                    <div class="gif-placeholder" role="img" aria-label="Placeholder for How To 1 animated walkthrough">
-                        <span>HOW TO 1</span>
-                        <strong>Animated Walkthrough</strong>
-                        <small>GIF placeholder · 16:9</small>
+                    <div class="gif-placeholder" role="img" aria-label="Placeholder for Identify a Record animated walkthrough">
+                        <span>WALKTHROUGH 1</span>
+                        <strong>Identify a Record</strong>
+                        <small>Animated GIF coming next</small>
                     </div>
                     <div class="howto-copy">
-                        <h3>How To 1</h3>
-                        <p>Add the scenario title and a short explanation of what the walkthrough demonstrates.</p>
+                        <h3>Identify a Record</h3>
+                        <p>Start with a barcode, catalog number, artist, or album and follow the search through album identification and Possible Matches when needed.</p>
                     </div>
                 </article>
 
                 <article class="howto-row">
-                    <div class="gif-placeholder" role="img" aria-label="Placeholder for How To 2 animated walkthrough">
-                        <span>HOW TO 2</span>
-                        <strong>Animated Walkthrough</strong>
-                        <small>GIF placeholder · 16:9</small>
+                    <div class="gif-placeholder" role="img" aria-label="Placeholder for Compare Vinyl Releases animated walkthrough">
+                        <span>WALKTHROUGH 2</span>
+                        <strong>Compare Vinyl Releases</strong>
+                        <small>Animated GIF coming next</small>
                     </div>
                     <div class="howto-copy">
-                        <h3>How To 2</h3>
-                        <p>Add the scenario title and a short explanation of what the walkthrough demonstrates.</p>
+                        <h3>Compare Vinyl Releases</h3>
+                        <p>Move from the identified album to vinyl releases, inspect release details, narrow the results, and review marketplace information.</p>
                     </div>
                 </article>
 
                 <article class="howto-row">
-                    <div class="gif-placeholder" role="img" aria-label="Placeholder for How To 3 animated walkthrough">
-                        <span>HOW TO 3</span>
-                        <strong>Animated Walkthrough</strong>
-                        <small>GIF placeholder · 16:9</small>
+                    <div class="gif-placeholder" role="img" aria-label="Placeholder for Collection and WantList animated walkthrough">
+                        <span>WALKTHROUGH 3</span>
+                        <strong>Use Collection &amp; WantList</strong>
+                        <small>Animated GIF coming next</small>
                     </div>
                     <div class="howto-copy">
-                        <h3>How To 3</h3>
-                        <p>Add the scenario title and a short explanation of what the walkthrough demonstrates.</p>
+                        <h3>Use Your Discogs Collection &amp; WantList</h3>
+                        <p>Connect a Discogs account, compare search results with personal library data, and save useful release candidates for later.</p>
                     </div>
                 </article>
             </div>

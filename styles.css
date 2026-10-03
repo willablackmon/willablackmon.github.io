@@ -559,7 +559,8 @@ main {
     width: 100%;
     height: clamp(180px, 24vw, 320px);
     object-fit: cover;
-    object-position: center;
+    /* Bias the banner crop upward so the full "Atomic LP" lettering remains visible. */
+    object-position: center 30%;
 }
 
 .featured-project-copy {

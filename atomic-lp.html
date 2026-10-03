@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Atomic LP Scanner: a full-stack vinyl album discovery, release research, marketplace, and collection application built by Will Blackmon.">
+    <meta name="description" content="Atomic LP Scanner: a working full-stack vinyl identification and release-research application demonstrating practical software architecture, API orchestration, persistence, authentication, testing, and deployment.">
     <title>Atomic LP Scanner | Will Blackmon</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -28,7 +28,7 @@
             <div class="detail-hero-copy">
                 <p class="eyebrow">2026–PRESENT · INDEPENDENT DEVELOPMENT</p>
                 <h2>Atomic LP Scanner</h2>
-                <p class="project-lead">Vinyl album identification, release research, marketplace, and collection workflow.</p>
+                <p class="project-lead">A working full-stack application for vinyl identification, release resolution, multi-service orchestration, persistence, and connected-account workflows.</p>
                 <p>
                     Atomic LP Scanner is a full-stack web application built to make the process of identifying a physical
                     record and narrowing it to the most useful vinyl release information faster. A search can start from
@@ -43,95 +43,155 @@
         <section class="detail-section">
             <div class="section-heading">
                 <p class="eyebrow">PROJECT OVERVIEW</p>
-                <h2>From Record in Hand to Release Candidates</h2>
+                <h2>A Real Application Built Around an Ambiguous Data Problem</h2>
             </div>
             <div class="detail-card">
                 <p>
-                    Vinyl research often begins with incomplete or inconsistent clues: a barcode, a catalog number,
-                    an artist and title, or a record whose packaging does not uniquely identify a pressing. Atomic LP
-                    coordinates multiple music-data services to resolve the album identity, surface plausible matches,
-                    and organize the resulting vinyl-release information into a single browser workflow.
+                    Vinyl research often starts with incomplete or inconsistent evidence: a barcode, catalog number,
+                    partial artist or album text, or packaging that does not uniquely identify a pressing. Atomic LP
+                    Scanner turns those imperfect inputs into a structured identification workflow rather than treating
+                    the problem as a simple API lookup.
                 </p>
                 <p>
-                    Clear searches can continue directly into release research. When more than one album identity is
-                    plausible, the application presents Possible Matches so the user can choose the correct album before
-                    deeper release work begins. The resulting workflow brings together artwork, release metadata,
-                    marketplace information, external album resources, and user-selected records without requiring the
-                    user to repeat the same search across multiple sites.
+                    The application coordinates multiple music-data services, builds and ranks candidate album identities,
+                    presents Possible Matches when the evidence is ambiguous, and continues into vinyl-release research only
+                    after an album identity is sufficiently clear or explicitly selected by the user.
                 </p>
             </div>
         </section>
 
         <section class="detail-section">
             <div class="section-heading">
-                <p class="eyebrow">CAPABILITIES</p>
-                <h2>What the Application Does</h2>
+                <p class="eyebrow">IDENTITY RESOLUTION</p>
+                <h2>Candidate Generation, Scoring, and Human Confirmation</h2>
             </div>
             <div class="capability-grid">
                 <article class="capability-card">
-                    <h3>Flexible Record Search</h3>
-                    <p>Search by barcode, catalog ID, artist + album, artist only, or album only, with browser-based scan/upload workflows for record identification.</p>
+                    <h3>Flexible Search Inputs</h3>
+                    <p>Search can begin from barcode, catalog ID, artist + album, artist-only input, or partial identifying information from a physical record.</p>
                 </article>
                 <article class="capability-card">
-                    <h3>Possible Match Resolution</h3>
-                    <p>Ambiguous results are presented as candidate albums with supporting metadata so a user can select the best match instead of accepting a weak automatic guess.</p>
+                    <h3>Possible Matches</h3>
+                    <p>When more than one album identity is plausible, the application surfaces candidates with supporting metadata instead of forcing a weak automatic choice.</p>
                 </article>
                 <article class="capability-card">
-                    <h3>Vinyl Release Research</h3>
-                    <p>Resolve an album to its vinyl release family, compare available pressings, inspect release details, and filter out formats that are outside the LP workflow.</p>
+                    <h3>Scored Resolution</h3>
+                    <p>Candidate ranking uses the available identifying evidence so clearer matches can advance automatically while ambiguous results remain under user control.</p>
                 </article>
                 <article class="capability-card">
-                    <h3>Marketplace &amp; External Resources</h3>
-                    <p>Bring marketplace information and supporting album links into the same research workflow, including artwork and links to additional music and shopping resources when available.</p>
-                </article>
-                <article class="capability-card">
-                    <h3>Discogs Collection &amp; WantList</h3>
-                    <p>Users can connect a Discogs account and search or compare results against their own Collection and WantList without mixing personal library data into the public search workflow.</p>
-                </article>
-                <article class="capability-card">
-                    <h3>Save &amp; Export</h3>
-                    <p>Keep selected releases in a session list or persistent user library and export saved release information for later research and comparison.</p>
+                    <h3>Master and Release Resolution</h3>
+                    <p>Once an album identity is selected, the workflow moves from album-level identity to Discogs Master and vinyl Release information for pressing research.</p>
                 </article>
             </div>
         </section>
 
         <section class="detail-section">
             <div class="section-heading">
-                <p class="eyebrow">SECURITY &amp; CONNECTED ACCOUNTS</p>
-                <h2>Personal Discogs Integration</h2>
+                <p class="eyebrow">APPLICATION ARCHITECTURE</p>
+                <h2>Stateful Multi-Service Orchestration</h2>
             </div>
             <div class="detail-card">
                 <p>
-                    Public album research does not require access to a user's personal Discogs data. Collection and
-                    WantList features are enabled separately through OAuth authorization. Connected-account tokens are
-                    stored encrypted on the server and are not exposed in browser code.
+                    The backend is built with Python and Flask, with PostgreSQL and SQLAlchemy for persistent application data.
+                    The browser interface uses JavaScript, HTML, and CSS to coordinate the interactive search state. Discogs is
+                    the primary catalog and release source, while MusicBrainz and supporting services provide alternate discovery,
+                    artwork, external links, and additional context.
                 </p>
                 <p>
-                    This separation allows Atomic LP to use public music metadata for general discovery while adding
-                    personalized Collection and WantList workflows only for users who explicitly connect an account.
-                </p>
-            </div>
-        </section>
-
-        <section class="detail-section">
-            <div class="section-heading">
-                <p class="eyebrow">ENGINEERING</p>
-                <h2>Built as a Stateful Multi-Service Workflow</h2>
-            </div>
-            <div class="detail-card">
-                <p>
-                    The backend is built with Python and Flask, with PostgreSQL and SQLAlchemy for persistence. The browser
-                    interface uses JavaScript, HTML, and CSS. The application coordinates several external data services while
-                    managing provider limits, partial results, slow responses, and alternate discovery paths.
-                </p>
-                <p>
-                    Development has focused on identity matching, API orchestration, caching, rate-limit awareness,
-                    cancellation and stale-result protection, performance instrumentation, responsive mobile behavior,
-                    error recovery, and automated regression testing. New searches, STOP, and CLEAR ALL supersede work from
-                    prior searches so late responses cannot overwrite the current record.
+                    The application treats those providers as separate workflows rather than a single chained request. That makes
+                    it possible to handle slow responses, provider limits, alternate discovery paths, partial results, and failures
+                    without collapsing the entire search.
                 </p>
                 <p class="tools"><strong>Key Tools:</strong> Python, Flask, JavaScript, PostgreSQL, SQLAlchemy, REST APIs,
                     JSON, Discogs, MusicBrainz, OAuth, pytest, Gunicorn, Render.</p>
+            </div>
+        </section>
+
+        <section class="detail-section">
+            <div class="section-heading">
+                <p class="eyebrow">STATE &amp; RELIABILITY</p>
+                <h2>Protecting the Current Search from Stale Work</h2>
+            </div>
+            <div class="capability-grid">
+                <article class="capability-card">
+                    <h3>Cancellation and Supersession</h3>
+                    <p>New searches, STOP, and CLEAR ALL supersede earlier work so late responses cannot overwrite the record the user is currently researching.</p>
+                </article>
+                <article class="capability-card">
+                    <h3>Partial Results</h3>
+                    <p>Provider workflows are allowed to complete independently, so useful results can still be shown when one external dependency is slow or unavailable.</p>
+                </article>
+                <article class="capability-card">
+                    <h3>Rate-Limit Awareness</h3>
+                    <p>Discogs usage is treated as a constrained resource, with workflow behavior designed around provider limits instead of assuming unlimited request capacity.</p>
+                </article>
+                <article class="capability-card">
+                    <h3>Performance Instrumentation</h3>
+                    <p>Development includes performance tracing and workflow logging to identify slow provider calls, long-running paths, and regressions in real search behavior.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="detail-section">
+            <div class="section-heading">
+                <p class="eyebrow">AUTHENTICATION &amp; PERSISTENCE</p>
+                <h2>Application Accounts Separated from Connected Services</h2>
+            </div>
+            <div class="detail-card">
+                <p>
+                    Atomic LP Scanner has its own application account system for registration, login, password changes,
+                    password recovery, and persistent user data. External services are connected separately rather than being
+                    used as the application's primary identity.
+                </p>
+                <p>
+                    Discogs account access is authorized through OAuth only when a user wants Collection or WantList features.
+                    Provider credentials are stored encrypted on the server and are kept separate from browser code and from the
+                    public album-search workflow.
+                </p>
+                <p>
+                    The authentication implementation is organized as reusable provider-neutral account and OAuth infrastructure,
+                    with Discogs-specific behavior isolated from the common authentication layer.
+                </p>
+            </div>
+        </section>
+
+        <section class="detail-section">
+            <div class="section-heading">
+                <p class="eyebrow">TESTING</p>
+                <h2>Regression Coverage Across Backend, Browser, and Architecture</h2>
+            </div>
+            <div class="capability-grid">
+                <article class="capability-card">
+                    <h3>Flask and API Tests</h3>
+                    <p>Endpoint tests exercise routes, query forwarding, persistence APIs, error responses, and security behavior with controlled provider substitutes.</p>
+                </article>
+                <article class="capability-card">
+                    <h3>Provider and Service Tests</h3>
+                    <p>Backend tests cover request parsing, provider workflows, payload normalization, retries, URL construction, and session lifecycle behavior.</p>
+                </article>
+                <article class="capability-card">
+                    <h3>Browser Contract Tests</h3>
+                    <p>Rendered-template, CSS, and executable JavaScript tests verify DOM structure, presentation contracts, and client-side workflow behavior.</p>
+                </article>
+                <article class="capability-card">
+                    <h3>Regression Tests</h3>
+                    <p>Previously observed search and workflow failures are retained as regression cases so fixes become part of the application's permanent validation set.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="detail-section">
+            <div class="section-heading">
+                <p class="eyebrow">DEPLOYMENT</p>
+                <h2>From Local Development to a Live Hosted Application</h2>
+            </div>
+            <div class="detail-card">
+                <p>
+                    Atomic LP Scanner is developed as a conventional Flask application, versioned in Git, tested locally,
+                    and deployed as a hosted web application using Gunicorn and Render with PostgreSQL-backed persistence.
+                    The live deployment provides a practical environment for validating authentication, provider integrations,
+                    browser behavior, performance, and regression fixes against real usage.
+                </p>
                 <p class="source-note"><strong>Source repository:</strong> Private.</p>
             </div>
         </section>

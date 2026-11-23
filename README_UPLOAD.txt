@@ -1,31 +1,28 @@
-AtomicLP Scan — GitHub Pages v10 (2026-11-22)
+AtomicLP Scan · portfolio v11 (2026-11-22)
 
-Update atomic-lp.html on the willablackmon.github.io GitHub Pages repository:
-1. Extract ZIP into C:\dev\github-io\app, preserving paths.
-2. This update changes atomic-lp.html and atomiclp-portfolio.css and
-   includes atomiclp-walkthrough.js and static fallback images.
-3. Do not delete your existing image assets, other website files, or index.html.
-4. git add atomic-lp.html atomiclp-portfolio.css atomiclp-walkthrough.js images/atomic-lp-scan-01.png images/atomic-lp-scan-02.png images/atomic-lp-scan-03.png
-5. git commit -m "Reorganize AtomicLP Scan overview and walkthroughs"
-6. git push origin main
-7. Confirm GitHub Pages deployment; refresh https://willablackmon.github.io/atomic-lp.html with Ctrl+Shift+R.
+Extract this ZIP into C:\dev\github-io\app (preserve folders).
+Updated:
+- atomic-lp.html: removed the additional segmented-controls design study and graphic.
+- Existing live Scan screenshot and other detail sections remain.
+- Existing 01/02/03 inline walkthrough preview and click-to-enlarge modal are retained.
+- CSS/JS cache version updated to v11.
 
-Changes
-- Moves project overview heading and both paragraphs into the introductory
-  two-column card, under the general description and above Launch AtomicLP Scan.
-- Removes the now-redundant standalone PROJECT OVERVIEW card.
-- Moves walkthrough rows 01, 02, 03 directly below the introductory card.
-- Removes the WALKTHROUGHS / How To Use AtomicLP Scan heading card.
-- Keeps the click-to-enlarge modal and its Escape / outside-click / Close controls.
-- Retains remaining page sections and existing layout.
+The three GIF uploads displayed in this conversation were converted to
+single-frame PNG content (even though their names end with .gif). The
+actual video/animation frames were not delivered to this chat. The
+website is already configured to play genuine animations at these paths:
+    images/atomic-lp-scan-01.gif
+    images/atomic-lp-scan-02.gif
+    images/atomic-lp-scan-03.gif
 
-ANIMATION LIMITATION
-The user-uploaded files atomic-lp-scan-01(1).gif through -03(1).gif
-contain single-frame PNGs, not GIF animation. This package keeps the
-static PNG fallbacks and looks for genuine animated GIFs at:
-  images/atomic-lp-scan-01.gif
-  images/atomic-lp-scan-02.gif
-  images/atomic-lp-scan-03.gif
-To animate in the inline panels AND the modal, install real animated GIFs
-at those paths (each must contain multiple frames). No recorded motion can
-be restored from the supplied single-frame files.
+To preserve original animation, put the three original GIFs into one ZIP
+on your computer and upload that ZIP to the chat, OR copy the original
+GIFs directly into C:\dev\github-io\app\images\ then commit/push.
+Do not rename a still PNG file to .gif; it remains a single frame.
+
+Publish:
+    git add atomic-lp.html atomiclp-portfolio.css atomiclp-walkthrough.js images/
+    git commit -m "Remove obsolete AtomicLP Scan UI concept section"
+    git push origin main
+
+Then check https://willablackmon.github.io/atomic-lp.html

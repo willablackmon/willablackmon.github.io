@@ -7,7 +7,7 @@
     <meta name="keywords" content="Will Blackmon, Software Development, Python, Flask, Data Engineering, Machine Learning, Artificial Intelligence, Data Science, Portfolio, Rice University, GitHub">
     <title>Will Blackmon | Software Development, Data & AI Projects</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="atomiclp-portfolio.css">
+    <link rel="stylesheet" href="atomiclp-portfolio.css?v=20261122-v7">
 <style>
 /* AtomicLP showcase cards v6 — self-contained; unrelated portfolio rows untouched. */
 .alp-featured, .alp-card, .alp-card * { box-sizing: border-box; }
@@ -15,12 +15,8 @@
     background: #fff; border: 3px solid #1e3a5f; border-radius: 11px;
     overflow: hidden; box-shadow: 0 5px 14px rgba(0,0,0,.16); margin-bottom: 14px;
 }
-.alp-banner {
-    display: block; width: 100%; height: clamp(170px, 23vw, 295px);
-    object-fit: cover; object-position: center 30%;
-}
 .alp-card {
-    display: grid !important; grid-template-columns: minmax(0, 34%) minmax(0, 66%) !important;
+    display: grid !important; grid-template-columns: minmax(0, 34%) minmax(0, 1fr) !important;
     align-items: stretch; width: 100%; min-width: 0; background: #fff;
 }
 .alp-listen-card {
@@ -53,7 +49,13 @@
 .alp-listen-shot img { object-position: 0% 0% !important; }
 /* Scan and Listen share the same 34% sidebar width. The preview is cropped
    from the top; click to open the full original screenshot. */
-.alp-scan-card { grid-template-columns: minmax(0, 34%) minmax(0, 66%) !important; }
+/* Unified width: AtomicLP Scan and AtomicLP Listen left rails are identical. */
+.alp-featured .alp-card.alp-scan-card,
+.alp-card.alp-listen-card {
+    grid-template-columns: minmax(0, 34%) minmax(0, 1fr) !important;
+}
+.alp-featured { width: 100%; max-width: 100%; }
+
 .alp-scan-card .alp-hero-shot img {
     height: 415px !important;
     object-fit: cover !important;
@@ -84,8 +86,7 @@
 .alp-gallery span { display: block; padding: 7px 8px; color: #fff; background: #20314a; font-size: .75rem; font-weight: 600; line-height: 1.3; }
 @media(max-width: 800px) {
     .alp-card { grid-template-columns: minmax(0, 1fr) !important; }
-    .alp-banner { height: 175px; }
-    .alp-hero-shot img { height: min(65vw, 400px) !important; }
+.alp-hero-shot img { height: min(65vw, 400px) !important; }
     .alp-scan-card { grid-template-columns: minmax(0, 1fr) !important; }
     .alp-scan-card .alp-hero-shot img { height: min(78vw, 480px) !important; }
     .alp-scan-card .alp-content { padding: 21px; }
@@ -96,6 +97,10 @@
     .alp-gallery { gap: 6px; }
     .alp-gallery img { height: 95px; }
     .alp-gallery span { font-size: .7rem; padding: 5px 6px; }
+}
+@media (max-width: 800px) {
+  .alp-featured .alp-card.alp-scan-card,
+  .alp-card.alp-listen-card { grid-template-columns: minmax(0, 1fr) !important; }
 }
 </style>
 </head>

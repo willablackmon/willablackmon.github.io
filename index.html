@@ -40,38 +40,50 @@
                 <p class="eyebrow">CURRENT INDEPENDENT DEVELOPMENT</p>
             </div>
 
-            <article class="featured-project-card">
-                <img class="featured-banner" src="images/atomic-lp-banner-wide.png" alt="Atomic LP Scanner record collection artwork">
-                <div class="featured-project-copy">
-                    <p class="eyebrow">LATEST PROJECT · 2026–PRESENT</p>
-                    <h2>Atomic LP Scanner</h2>
-                    <p class="project-lead">Vinyl album identification, release research, marketplace, and collection workflow.</p>
-                    <p>
-                        Full-stack web application for identifying records from barcode, catalog number, artist, or album searches;
-                        resolving plausible album and vinyl-release matches; comparing pressings and marketplace information; and
-                        working with a connected Discogs Collection and WantList.
-                    </p>
-                    <p class="tools"><strong>Key Tools:</strong> Python, Flask, JavaScript, PostgreSQL, SQLAlchemy,
-                        REST APIs, JSON, Discogs, MusicBrainz, OAuth, pytest, Gunicorn, Nginx,
-                        PostgreSQL 18, Ubuntu Server, Hyper-V, GitHub Actions, Cloudflare Tunnel.</p>
-                    <div class="project-actions">
-                        <a class="button primary" href="atomic-lp.html">Project Details &amp; Walkthroughs</a>
-                        <a class="button" href="https://scan.atomiclp.com/" target="_blank" rel="noopener noreferrer">Launch Live App</a>
+            <article class="featured-project-card atomic-scanner-card">
+                <img class="featured-banner" src="images/atomic-lp-banner-wide.png" alt="Vinyl record shelves and audio equipment representing Atomic LP">
+                <div class="atomic-featured-grid">
+                    <div class="atomic-sidebar">
+                        <div class="atomic-sidebar-heading">
+                            <span class="project-date">CURRENT APPLICATION · 2026–PRESENT</span>
+                            <h2>Atomic LP Scanner</h2>
+                            <span class="project-type">Production Web App · Active Development</span>
+                        </div>
+                        <a class="atomic-primary-shot" href="images/atomic-lp-scanner-live.webp" target="_blank" rel="noopener noreferrer" aria-label="View the full live Atomic LP Scanner screenshot">
+                            <img src="images/atomic-lp-scanner-live.webp" width="589" height="828" alt="Atomic LP Scanner displaying barcode, artist, and album search inputs, Shakey Graves release research, and vinyl pressing results" loading="lazy">
+                        </a>
+                        <p class="atomic-shot-caption">Current Scanner interface · select to enlarge</p>
                     </div>
-                    <a class="atomic-preview-link" href="atomic-lp.html#interface-preview">View Interface Design Concept &rarr;</a>
+                    <div class="featured-project-copy">
+                        <p class="project-lead">Vinyl album identification, release research, marketplace, and collection workflow.</p>
+                        <p>
+                            Full-stack web application for identifying records from barcode, catalog number, artist, or album searches;
+                            resolving plausible album and vinyl-release matches; comparing pressings and marketplace information; and
+                            working with a connected Discogs Collection and WantList.
+                        </p>
+                        <p class="tools"><strong>Key Tools:</strong> Python, Flask, JavaScript, PostgreSQL 18, SQLAlchemy,
+                            REST APIs, JSON, Discogs, MusicBrainz, OAuth, pytest, Gunicorn, Nginx,
+                            Ubuntu Server, Hyper-V, GitHub Actions, Cloudflare Tunnel.</p>
+                        <div class="project-actions">
+                            <a class="button primary" href="atomic-lp.html">Project Details &amp; Walkthroughs</a>
+                            <a class="button" href="https://scan.atomiclp.com/" target="_blank" rel="noopener noreferrer">Launch AtomicLP Scan</a>
+                        </div>
+                        <a class="atomic-preview-link" href="atomic-lp.html#interface-preview">View Scanner Interface &rarr;</a>
+                    </div>
                 </div>
             </article>
 
-            <article class="project-row current-prototype">
-                <div class="project-visual listener-visual">
-                    <a class="listener-cover-link" href="images/lp-listener-recognized.webp" target="_blank" rel="noopener noreferrer" aria-label="View full Atomic LP Listener screenshot showing recognized music">
-                        <img src="images/lp-listener-recognized.webp" alt="Atomic LP Listener recognizing Tears for Fears, with album artwork, a color waveform, and interactive visualizer controls" width="1015" height="835" loading="lazy">
-                    </a>
-                    <div class="project-label">
+            <article class="project-row current-prototype atomic-project-card">
+                <div class="atomic-sidebar">
+                    <div class="atomic-sidebar-heading">
                         <span class="project-date">CURRENT APPLICATION · 2026–PRESENT</span>
                         <h3>Atomic LP Listener</h3>
                         <span class="project-type">Working Web App · Active Development</span>
                     </div>
+                    <a class="atomic-primary-shot" href="images/lp-listener-the-cure-neon.webp" target="_blank" rel="noopener noreferrer" aria-label="View the Atomic LP Listener screenshot featuring The Cure">
+                        <img src="images/lp-listener-the-cure-neon.webp" width="1139" height="837" alt="Atomic LP Listener displaying The Cure's Lovesong (Extended Mix), with the Mixed Up album artwork, a neon waveform, and responsive visual effects" loading="lazy">
+                    </a>
+                    <p class="atomic-shot-caption">The Cure · Neon visualizer · select to enlarge</p>
                 </div>
                 <div class="project-details">
                     <p class="project-lead">Browser-based song recognition paired with interactive, album-aware music visualizations.</p>
@@ -93,16 +105,16 @@
                             <span>Listening &amp; Visualizing ↗</span>
                         </a>
                         <a href="images/lp-listener-recognized.webp" target="_blank" rel="noopener noreferrer">
-                            <img src="images/lp-listener-recognized.webp" alt="Listener recognizing a track and displaying the album artwork over the music visualization" width="1015" height="835" loading="lazy">
+                            <img src="images/lp-listener-recognized.webp" alt="Listener recognizing Tears for Fears with album art and live visualization" width="1015" height="835" loading="lazy">
                             <span>Recognized Track ↗</span>
                         </a>
                         <a href="images/lp-listener-the-cure-neon.webp" target="_blank" rel="noopener noreferrer">
-                            <img src="images/lp-listener-the-cure-neon.webp" alt="Atomic LP Listener displaying Lovesong (Extended Mix) by The Cure, with neon-colored waveform, album artwork, and visual effects controls" width="1134" height="837" loading="lazy">
+                            <img src="images/lp-listener-the-cure-neon.webp" alt="Listener playing The Cure with the neon waveform effect" width="1139" height="837" loading="lazy">
                             <span>The Cure · Neon Visualizer ↗</span>
                         </a>
                     </div>
                     <div class="project-actions">
-                        <a class="button" href="https://listen.atomiclp.com/" target="_blank" rel="noopener noreferrer">Launch Live Listener</a>
+                        <a class="button" href="https://listen.atomiclp.com/" target="_blank" rel="noopener noreferrer">Launch AtomicLP Listen</a>
                     </div>
                 </div>
             </article>

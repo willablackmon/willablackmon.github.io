@@ -1,37 +1,84 @@
-/* Atomic LP portfolio enhancements — 2026-11-22 */
-.current-prototype .listener-visual {
-    min-height: 325px;
-    background: #08090c;
+/* Atomic LP portfolio: balanced project side panels and larger screenshot gallery. */
+.atomic-featured-grid,
+.atomic-project-card {
+    display: grid;
+    grid-template-columns: minmax(270px, 36%) minmax(0, 1fr);
+    align-items: start;
 }
-.current-prototype .listener-visual .listener-cover-link {
-    position: absolute;
-    inset: 0;
+.atomic-project-card { min-height: 0; }
+.atomic-featured-grid > *,
+.atomic-project-card > * { min-width: 0; }
+.atomic-sidebar {
+    align-self: start;
+    padding: 15px;
+    background: #f1f2f3;
+    color: #18304c;
+}
+.atomic-sidebar-heading {
+    padding: 13px 15px 14px;
+    margin-bottom: 12px;
+    color: #fff;
+    background: #172d49;
+    border-radius: 7px;
+}
+.atomic-sidebar-heading .project-date,
+.atomic-sidebar-heading .project-type {
     display: block;
+    color: #ecf0f5;
+    font-size: .79rem;
+    line-height: 1.35;
 }
-.current-prototype .listener-visual .listener-cover-link img {
+.atomic-sidebar-heading .project-date {
+    font-weight: 700;
+    letter-spacing: .04em;
+}
+.atomic-sidebar-heading h2,
+.atomic-sidebar-heading h3 {
+    margin: 6px 0 5px;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1.15;
+}
+.atomic-primary-shot {
+    display: block;
+    background: #e8e9ea;
+    border: 1px solid #cbd1d7;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.atomic-primary-shot img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
     min-height: 0;
+    max-height: 430px;
     object-fit: contain;
-    object-position: center top;
+    object-position: top center;
     opacity: 1;
-    background: #08090c;
+    transition: none;
 }
-.current-prototype .listener-visual::after {
-    pointer-events: none;
-    z-index: 1;
-    background: linear-gradient(to top, rgba(5, 8, 12, .98), rgba(5, 8, 12, .42) 30%, transparent 58%);
+.atomic-shot-caption {
+    margin: 9px 1px 0;
+    color: #526274;
+    font-size: .77rem;
+    line-height: 1.35;
 }
-.current-prototype .listener-visual .project-label {
-    z-index: 2;
-    pointer-events: none;
+.atomic-scanner-card .featured-project-copy {
+    min-width: 0;
+    padding: 24px 26px;
+}
+.atomic-project-card .project-details {
+    min-width: 0;
+}
+.atomic-project-card .project-lead,
+.atomic-scanner-card .project-lead {
+    margin-top: 0;
 }
 .listener-gallery {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 10px;
-    margin: 12px 0 18px;
+    margin: 15px 0 19px;
 }
 .listener-gallery a {
     display: block;
@@ -50,18 +97,40 @@
 }
 .listener-gallery img {
     width: 100%;
-    height: 105px;
+    height: 138px;
+    min-height: 0;
     object-fit: contain;
     display: block;
     background: #09080d;
 }
 .listener-gallery span {
     display: block;
-    padding: 6px 10px;
+    padding: 7px 9px;
     color: #faf8f3;
     background: #202a38;
     font-size: .8rem;
     font-weight: 600;
+    line-height: 1.25;
+}
+.atomic-ui-screenshot {
+    margin: 14px 0 23px;
+    padding: 14px;
+    text-align: center;
+    background: #f0f2f4;
+    border: 1px solid #d7dde2;
+    border-radius: 10px;
+}
+.atomic-ui-screenshot a { display: inline-block; max-width: min(100%, 460px); }
+.atomic-ui-screenshot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.atomic-ui-screenshot figcaption {
+    color: #3f5364;
+    font-size: .86rem;
+    margin-top: 9px;
 }
 .atomic-ui-concept {
     margin: 0;
@@ -84,11 +153,22 @@
     line-height: 1.45;
 }
 .atomic-design-text { margin-bottom: 14px; }
-.atomic-preview-link { display: inline-block; margin-top: 10px; font-size: .92rem; }
+.atomic-preview-link { display: inline-block; margin-top: 12px; font-size: .92rem; }
 @media (max-width: 760px) {
-    .current-prototype .listener-visual { height: 260px; min-height: 260px; }
-    .current-prototype .listener-visual .listener-cover-link img { height: 100%; min-height: 0; }
+    .atomic-featured-grid,
+    .atomic-project-card { grid-template-columns: minmax(0, 1fr); }
+    .atomic-sidebar { padding: 12px; }
+    .atomic-primary-shot img { max-height: 420px; }
+    .atomic-scanner-card .featured-project-copy { padding: 19px 20px; }
     .listener-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .listener-gallery img { height: 88px; }
-    .atomic-ui-concept { padding: 7px; }
+    .listener-gallery img { height: 122px; }
+    .atomic-ui-concept,
+    .atomic-ui-screenshot { padding: 8px; }
+}
+@media (max-width: 480px) {
+    .listener-gallery { gap: 8px; }
+    .listener-gallery img { height: 110px; }
+    .listener-gallery span { font-size: .73rem; }
+    .atomic-sidebar-heading h2,
+    .atomic-sidebar-heading h3 { font-size: 1.35rem; }
 }

@@ -1,24 +1,31 @@
-Atomic LP GitHub Pages — Portfolio Update (November 22, 2026)
+Atomic LP GitHub Pages — Portfolio Update v3 (November 22, 2026)
 
-Upload these files to the MAIN branch of willablackmon/willablackmon.github.io:
+Copy these files into C:\dev\github-io\app, preserving the images/ folder:
+
   index.html
   atomic-lp.html
   atomiclp-portfolio.css
+  images/atomic-lp-scanner-live.webp          (NEW)
   images/lp-listener-listening.webp
   images/lp-listener-recognized.webp
   images/lp-listener-the-cure-neon.webp
   images/atomic-lp-interface-concept.webp
 
-Use the corresponding root and images/ directories. Keep all existing files,
-including styles.css, images/atomic-lp-banner-wide.png, images/photo.jpg, etc.
-
 Changes:
-- New self-hosted production URLs for Scanner and Listener.
-- More complete Listener description of recognition and visualizations.
-- New Listener thumbnail and three clickable full-size screenshots, including The Cure.
-- New Scanner design-concept section, labeled explicitly as a proposal.
-- Corrected old Render references to self-hosted Ubuntu/Hyper-V/GitHub Actions.
-- No JavaScript required; assets are optimized WebP images.
+- Scanner now has a left-side live screenshot panel below the existing banner.
+- Both panels put CURRENT APPLICATION and the project title ABOVE the image.
+- Listener uses the new The Cure screenshot as its primary image.
+- Removed the large blank black Listener side-panel area.
+- Enlarged the three Listener gallery previews.
+- Deduplicated PostgreSQL in Scanner technology descriptions.
+- Changed link text to Launch AtomicLP Scan and Launch AtomicLP Listen.
+- Updated the Scanner interface link to point to a live interface preview in the detail page.
 
-Note: GitHub connector write access returned HTTP 403 previously.
-No changes to the live site have been made by this ZIP creation.
+No changes to existing styles.css or site banner images are required.
+
+From Git Bash in C:\dev\github-io\app:
+  git add index.html atomic-lp.html atomiclp-portfolio.css images/atomic-lp-scanner-live.webp
+  git commit -m "Refresh Atomic LP portfolio card layouts and screenshots"
+  git push origin main
+
+Refresh https://willablackmon.github.io/ once GitHub Pages finishes building.

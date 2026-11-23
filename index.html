@@ -7,6 +7,7 @@
     <meta name="keywords" content="Will Blackmon, Software Development, Python, Flask, Data Engineering, Machine Learning, Artificial Intelligence, Data Science, Portfolio, Rice University, GitHub">
     <title>Will Blackmon | Software Development, Data & AI Projects</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="atomiclp-portfolio.css">
 </head>
 <body>
 
@@ -51,33 +52,57 @@
                         working with a connected Discogs Collection and WantList.
                     </p>
                     <p class="tools"><strong>Key Tools:</strong> Python, Flask, JavaScript, PostgreSQL, SQLAlchemy,
-                        REST APIs, JSON, Discogs, MusicBrainz, OAuth, pytest, Gunicorn, Render.</p>
+                        REST APIs, JSON, Discogs, MusicBrainz, OAuth, pytest, Gunicorn, Nginx,
+                        PostgreSQL 18, Ubuntu Server, Hyper-V, GitHub Actions, Cloudflare Tunnel.</p>
                     <div class="project-actions">
                         <a class="button primary" href="atomic-lp.html">Project Details &amp; Walkthroughs</a>
-                        <a class="button" href="https://lp-scanner.onrender.com/" target="_blank" rel="noopener noreferrer">Launch Live App</a>
+                        <a class="button" href="https://scan.atomiclp.com/" target="_blank" rel="noopener noreferrer">Launch Live App</a>
                     </div>
+                    <a class="atomic-preview-link" href="atomic-lp.html#interface-preview">View Interface Design Concept &rarr;</a>
                 </div>
             </article>
 
             <article class="project-row current-prototype">
-                <div class="project-visual">
-                    <img src="images/lp-listener.png" alt="Atomic LP Listener prototype interface">
+                <div class="project-visual listener-visual">
+                    <a class="listener-cover-link" href="images/lp-listener-recognized.webp" target="_blank" rel="noopener noreferrer" aria-label="View full Atomic LP Listener screenshot showing recognized music">
+                        <img src="images/lp-listener-recognized.webp" alt="Atomic LP Listener recognizing Tears for Fears, with album artwork, a color waveform, and interactive visualizer controls" width="1015" height="835" loading="lazy">
+                    </a>
                     <div class="project-label">
-                        <span class="project-date">CURRENT PROTOTYPE · 2026–PRESENT</span>
+                        <span class="project-date">CURRENT APPLICATION · 2026–PRESENT</span>
                         <h3>Atomic LP Listener</h3>
-                        <span class="project-type">Working Prototype · Active Development</span>
+                        <span class="project-type">Working Web App · Active Development</span>
                     </div>
                 </div>
                 <div class="project-details">
-                    <p class="project-lead">Browser-based music identification from a short microphone sample.</p>
+                    <p class="project-lead">Browser-based song recognition paired with interactive, album-aware music visualizations.</p>
                     <p>
-                        Working prototype that records an eight-second sample in the browser, sends it to a Flask backend,
-                        identifies the recording with ShazamIO, and returns artist, track, album, cover art, and raw recognition data
-                        for further enrichment and experimentation.
+                        Atomic LP Listener captures a short microphone sample in the browser and uses a Python/Flask backend
+                        with ShazamIO to recognize the recording. It presents the artist, track, album, artwork, and release context,
+                        then brings the album to life with real-time visualizations and configurable effects.
                     </p>
-                    <p class="tools"><strong>Key Tools:</strong> Python, Flask, JavaScript, Browser Media APIs, ShazamIO, JSON, pytest, Render.</p>
+                    <p>
+                        The interface includes spectrum, waveform, oscilloscope, and wave-ribbon views, plus controls for color,
+                        responsiveness, background artwork, and visual intensity. Automatic listening and a responsive interface
+                        support a continuous music-discovery experience.
+                    </p>
+                    <p class="tools"><strong>Key Tools:</strong> Python, Flask, JavaScript, Browser Media APIs, ShazamIO,
+                        JSON, pytest, Gunicorn, Nginx, Ubuntu Server, GitHub Actions, Cloudflare Tunnel.</p>
+                    <div class="listener-gallery" aria-label="Atomic LP Listener screenshots">
+                        <a href="images/lp-listener-listening.webp" target="_blank" rel="noopener noreferrer">
+                            <img src="images/lp-listener-listening.webp" alt="Listener capturing audio with an oscilloscope waveform and visual effects controls" width="1392" height="737" loading="lazy">
+                            <span>Listening &amp; Visualizing ↗</span>
+                        </a>
+                        <a href="images/lp-listener-recognized.webp" target="_blank" rel="noopener noreferrer">
+                            <img src="images/lp-listener-recognized.webp" alt="Listener recognizing a track and displaying the album artwork over the music visualization" width="1015" height="835" loading="lazy">
+                            <span>Recognized Track ↗</span>
+                        </a>
+                        <a href="images/lp-listener-the-cure-neon.webp" target="_blank" rel="noopener noreferrer">
+                            <img src="images/lp-listener-the-cure-neon.webp" alt="Atomic LP Listener displaying Lovesong (Extended Mix) by The Cure, with neon-colored waveform, album artwork, and visual effects controls" width="1134" height="837" loading="lazy">
+                            <span>The Cure · Neon Visualizer ↗</span>
+                        </a>
+                    </div>
                     <div class="project-actions">
-                        <a class="button" href="https://lp-listener.onrender.com/" target="_blank" rel="noopener noreferrer">Try Working Prototype</a>
+                        <a class="button" href="https://listen.atomiclp.com/" target="_blank" rel="noopener noreferrer">Launch Live Listener</a>
                     </div>
                 </div>
             </article>

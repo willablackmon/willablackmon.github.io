@@ -6,6 +6,7 @@
     <meta name="description" content="Atomic LP Scanner: a working full-stack vinyl identification and release-research application demonstrating practical software architecture, API orchestration, persistence, authentication, testing, and deployment.">
     <title>Atomic LP Scanner | Will Blackmon</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="atomiclp-portfolio.css">
 </head>
 <body>
     <header>
@@ -35,7 +36,7 @@
                     a barcode, catalog number, artist, album, or a combination of those inputs.
                 </p>
                 <div class="project-actions">
-                    <a class="button primary" href="https://lp-scanner.onrender.com/" target="_blank" rel="noopener noreferrer">Try the Live App</a>
+                    <a class="button primary" href="https://scan.atomiclp.com/" target="_blank" rel="noopener noreferrer">Try the Live App</a>
                 </div>
             </div>
         </section>
@@ -103,7 +104,28 @@
                     without collapsing the entire search.
                 </p>
                 <p class="tools"><strong>Key Tools:</strong> Python, Flask, JavaScript, PostgreSQL, SQLAlchemy, REST APIs,
-                    JSON, Discogs, MusicBrainz, OAuth, pytest, Gunicorn, Render.</p>
+                    JSON, Discogs, MusicBrainz, OAuth, pytest, Gunicorn, Nginx, PostgreSQL 18,
+                    Ubuntu Server, Hyper-V, GitHub Actions, Cloudflare Tunnel.</p>
+            </div>
+        </section>
+
+        <section class="detail-section" id="interface-preview">
+            <div class="section-heading">
+                <p class="eyebrow">INTERFACE DESIGN</p>
+                <h2>Purpose-Built Controls for Record Research</h2>
+            </div>
+            <div class="detail-card">
+                <p class="atomic-design-text">
+                    The user interface organizes search, activity, saved records, connected accounts, and settings into
+                    compact, task-oriented controls. The design emphasizes readable release information and fast switching
+                    between workflows on desktop and mobile.
+                </p>
+                <figure class="atomic-ui-concept">
+                    <a href="images/atomic-lp-interface-concept.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the Atomic LP segmented controls design concept at full size">
+                        <img src="images/atomic-lp-interface-concept.webp" alt="Atomic LP interface design proposal showing segmented Activity, Save, Settings, Scan, Upload, Saved, Library, Accounts, and Settings controls" width="1672" height="941" loading="lazy">
+                    </a>
+                    <figcaption>Segmented-controls design proposal. This image illustrates the intended UI direction, not a screenshot of the deployed application. Select to view full size.</figcaption>
+                </figure>
             </div>
         </section>
 
@@ -183,14 +205,16 @@
         <section class="detail-section">
             <div class="section-heading">
                 <p class="eyebrow">DEPLOYMENT</p>
-                <h2>From Local Development to a Live Hosted Application</h2>
+                <h2>Production Deployment on Self-Hosted Infrastructure</h2>
             </div>
             <div class="detail-card">
                 <p>
-                    Atomic LP Scanner is developed as a conventional Flask application, versioned in Git, tested locally,
-                    and deployed as a hosted web application using Gunicorn and Render with PostgreSQL-backed persistence.
-                    The live deployment provides a practical environment for validating authentication, provider integrations,
-                    browser behavior, performance, and regression fixes against real usage.
+                    Atomic LP Scanner is versioned in Git and deployed through GitHub Actions to separate development
+                    and production applications on a self-hosted Ubuntu Server virtual machine running under Hyper-V.
+                    Flask and Gunicorn serve the application behind Nginx; PostgreSQL 18 provides persistent data,
+                    and a Cloudflare Tunnel exposes HTTPS endpoints without direct router port forwarding.
+                    The production environment supports real-world validation of authentication, integrations,
+                    browser behavior, performance, and regression fixes.
                 </p>
                 <p class="source-note"><strong>Source repository:</strong> Private.</p>
             </div>

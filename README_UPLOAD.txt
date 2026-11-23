@@ -1,30 +1,28 @@
-AtomicLP GitHub Pages — Portfolio Layout Refinements v5 (November 22, 2026)
+AtomicLP GitHub Pages — Portfolio Layout Update v6 (November 22, 2026)
 
-CHANGES FROM v4
-- Application names throughout visible content: AtomicLP Scan and AtomicLP Listen.
-- Adjusted the Scan left column from 34% to 39%, showing the interface screenshot at a larger size.
-- Reduced the Scan screenshot preview height to 395px; top portion stays visible, lower portions are available by clicking to enlarge.
-- Kept the Scan description vertically centered, with less overall card height and more even whitespace.
-- Preserved the Listen card layout, The Cure main image, existing banner and other portfolio projects.
-- Changed the detail page section title to LIVE SCAN INTERFACE.
-- Kept production buttons: Launch AtomicLP Scan and Launch AtomicLP Listen.
+CHANGES
+1. index.html: AtomicLP Scan left panel restored to the same 34% width as AtomicLP Listen.
+2. index.html: Scan left-panel image is replaced with the St. Vincent / Marry Me live screenshot.
+3. index.html: Removed the CURRENT INDEPENDENT DEVELOPMENT strip and the full-width Atomic LP banner.
+4. atomic-lp.html: Added the existing Atomic LP banner as a full-width image above the project hero.
+5. atomic-lp.html: Replaced the hero's banner art with that same St. Vincent screenshot, clickable to view full size.
+6. atomic-lp.html: Updated the additional live-interface screenshot to the same image.
+7. Existing Listen text, gallery, other portfolio projects, and production application links preserved.
 
-TO UPDATE YOUR LOCAL REPO
-Copy these files into C:\dev\github-io\app, preserving the images subfolder:
-  index.html
-  atomic-lp.html
-  atomiclp-portfolio.css
-  images/atomic-lp-scanner-live.webp
-  images/lp-listener-listening.webp
-  images/lp-listener-recognized.webp
-  images/lp-listener-the-cure-neon.webp
-  images/atomic-lp-interface-concept.webp
+COPY INTO
+  C:\dev\github-io\app\index.html
+  C:\dev\github-io\app\atomic-lp.html
+  C:\dev\github-io\app\atomiclp-portfolio.css
+  C:\dev\github-io\app\images\atomic-lp-scan-st-vincent.webp
 
-Retain your existing styles.css and other images (they are not part of this ZIP).
+Keep your existing styles.css, images/atomic-lp-banner-wide.png, and all other files.
+The new screenshot uses a NEW filename to avoid stale GitHub Pages image caches.
 
-GIT BASH (from C:\dev\github-io\app)
-  git add index.html atomic-lp.html atomiclp-portfolio.css images/
-  git commit -m "Refine AtomicLP Scan showcase layout and application names"
+FROM GIT BASH (C:/dev/github-io/app)
+  git add index.html atomic-lp.html atomiclp-portfolio.css images/atomic-lp-scan-st-vincent.webp
+  git commit -m "Refine AtomicLP Scan sidebar and move banner to details page"
   git push origin main
 
-Review https://willablackmon.github.io/ after GitHub Pages deployment completes.
+CHECK
+  https://willablackmon.github.io/
+  https://willablackmon.github.io/atomic-lp.html

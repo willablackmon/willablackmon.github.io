@@ -172,3 +172,54 @@
     .atomic-sidebar-heading h2,
     .atomic-sidebar-heading h3 { font-size: 1.35rem; }
 }
+
+
+/* v6 — the Atomic LP artwork is a full-width detail-page banner, not the
+   left-hand image inside the hero card. */
+.alp-detail-banner {
+    width: 100%;
+    margin: 0 0 12px;
+    border: 3px solid var(--navy, #1e3a5f);
+    border-radius: 10px;
+    background: #ead5ad;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .13);
+}
+.alp-detail-banner img {
+    display: block;
+    width: 100%;
+    height: clamp(170px, 23vw, 300px);
+    object-fit: cover;
+    object-position: center 30%;
+}
+.detail-hero .alp-detail-live-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    background: #111b29;
+}
+.detail-hero .alp-detail-live-image a {
+    display: block;
+    width: 100%;
+    max-width: 395px;
+    text-align: center;
+}
+.detail-hero .alp-detail-live-image img {
+    display: block;
+    width: 100%;
+    height: 490px;
+    max-height: 490px;
+    object-fit: contain;
+    object-position: center top;
+    margin: 0 auto;
+}
+@media (max-width: 760px) {
+    .alp-detail-banner img { height: 170px; }
+    .detail-hero .alp-detail-live-image img {
+        height: auto;
+        max-height: 510px;
+        width: auto;
+        max-width: 100%;
+    }
+}

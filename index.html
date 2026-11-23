@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="atomiclp-portfolio.css">
 <style>
-/* AtomicLP showcase cards v5 — self-contained; unrelated portfolio rows untouched. */
+/* AtomicLP showcase cards v6 — self-contained; unrelated portfolio rows untouched. */
 .alp-featured, .alp-card, .alp-card * { box-sizing: border-box; }
 .alp-featured {
     background: #fff; border: 3px solid #1e3a5f; border-radius: 11px;
@@ -51,13 +51,11 @@
 }
 .alp-scan-shot img { object-fit: contain !important; }
 .alp-listen-shot img { object-position: 0% 0% !important; }
-/* Scan layout: slightly wider screenshot column, with a tighter image viewport.
-   The full uncropped screenshot remains available by clicking the preview. */
-.alp-scan-card {
-    grid-template-columns: minmax(0, 39%) minmax(0, 61%) !important;
-}
+/* Scan and Listen share the same 34% sidebar width. The preview is cropped
+   from the top; click to open the full original screenshot. */
+.alp-scan-card { grid-template-columns: minmax(0, 34%) minmax(0, 66%) !important; }
 .alp-scan-card .alp-hero-shot img {
-    height: 395px !important;
+    height: 415px !important;
     object-fit: cover !important;
     object-position: center top !important;
 }
@@ -128,12 +126,7 @@
 
     <main>
         <section class="portfolio-section current-work">
-            <div class="section-heading compact-heading">
-                <p class="eyebrow">CURRENT INDEPENDENT DEVELOPMENT</p>
-            </div>
-
             <article class="alp-featured" aria-labelledby="alp-scan-heading">
-                <img class="alp-banner" src="images/atomic-lp-banner-wide.png" alt="Records, turntable, and hi-fi equipment representing AtomicLP">
                 <div class="alp-card alp-scan-card">
                     <aside class="alp-side">
                         <div class="alp-side-title">
@@ -141,8 +134,8 @@
                             <h2 id="alp-scan-heading">AtomicLP Scan</h2>
                             <p class="alp-status">Production Web App · Active Development</p>
                         </div>
-                        <a class="alp-hero-shot alp-scan-shot" href="images/atomic-lp-scanner-live.webp" target="_blank" rel="noopener noreferrer" aria-label="Enlarge AtomicLP Scan production screenshot">
-                            <img src="images/atomic-lp-scanner-live.webp" width="589" height="828" alt="AtomicLP Scan showing a Shakey Graves album search and vinyl pressing results" loading="lazy">
+                        <a class="alp-hero-shot alp-scan-shot" href="images/atomic-lp-scan-st-vincent.webp" target="_blank" rel="noopener noreferrer" aria-label="Enlarge AtomicLP Scan production screenshot">
+                            <img src="images/atomic-lp-scan-st-vincent.webp" width="577" height="889" alt="AtomicLP Scan showing St. Vincent’s Marry Me album, Discogs marketplace values, and filtered vinyl releases" loading="lazy">
                         </a>
                         <p class="alp-shot-note">Production interface · click to enlarge ↗</p>
                     </aside>

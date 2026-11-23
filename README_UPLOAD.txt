@@ -1,31 +1,33 @@
-Atomic LP GitHub Pages — Portfolio Update v3 (November 22, 2026)
+AtomicLP GitHub Pages — Portfolio Layout Fix v4 (November 22, 2026)
 
-Copy these files into C:\dev\github-io\app, preserving the images/ folder:
+CHANGE SUMMARY
+- Corrected both homepage showcase cards: dark left screenshot panels, clean white right text panels.
+- Restored side-by-side desktop layout and stacked mobile layout; no text can overlay screenshots.
+- Kept CURRENT APPLICATION / project title ABOVE the main screenshots.
+- The Cure image remains the primary AtomicLP Listen screenshot.
+- AtomicLP Scan uses the production Scan screenshot, with the existing record-shelf banner retained.
+- Corrected public-facing project names throughout: AtomicLP Scan and AtomicLP Listen.
+- Buttons: Launch AtomicLP Scan and Launch AtomicLP Listen.
+- Layout rules are embedded in index.html to avoid missing / stale secondary CSS causing collapse.
+- Links still point to https://scan.atomiclp.com/ and https://listen.atomiclp.com/.
+- Existing images and other portfolio projects are unchanged.
 
+UPLOAD
+Copy into C:\dev\github-io\app and preserve images/ subfolder:
   index.html
   atomic-lp.html
-  atomiclp-portfolio.css
-  images/atomic-lp-scanner-live.webp          (NEW)
+  atomiclp-portfolio.css (kept for detail-page UI screenshots)
+  images/atomic-lp-scanner-live.webp
   images/lp-listener-listening.webp
   images/lp-listener-recognized.webp
   images/lp-listener-the-cure-neon.webp
   images/atomic-lp-interface-concept.webp
 
-Changes:
-- Scanner now has a left-side live screenshot panel below the existing banner.
-- Both panels put CURRENT APPLICATION and the project title ABOVE the image.
-- Listener uses the new The Cure screenshot as its primary image.
-- Removed the large blank black Listener side-panel area.
-- Enlarged the three Listener gallery previews.
-- Deduplicated PostgreSQL in Scanner technology descriptions.
-- Changed link text to Launch AtomicLP Scan and Launch AtomicLP Listen.
-- Updated the Scanner interface link to point to a live interface preview in the detail page.
+Do NOT delete styles.css or other existing images.
 
-No changes to existing styles.css or site banner images are required.
-
-From Git Bash in C:\dev\github-io\app:
-  git add index.html atomic-lp.html atomiclp-portfolio.css images/atomic-lp-scanner-live.webp
-  git commit -m "Refresh Atomic LP portfolio card layouts and screenshots"
+DEPLOY (Git Bash in C:\dev\github-io\app)
+  git add index.html atomic-lp.html atomiclp-portfolio.css images/
+  git commit -m "Fix AtomicLP portfolio cards and project naming"
   git push origin main
 
-Refresh https://willablackmon.github.io/ once GitHub Pages finishes building.
+Check your live homepage after GitHub Pages finishes building (hard refresh Ctrl+Shift+R).

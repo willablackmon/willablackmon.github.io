@@ -8,6 +8,80 @@
     <title>Will Blackmon | Software Development, Data & AI Projects</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="atomiclp-portfolio.css">
+<style>
+/* AtomicLP showcase cards v4 — self-contained; unrelated portfolio rows untouched. */
+.alp-featured, .alp-card, .alp-card * { box-sizing: border-box; }
+.alp-featured {
+    background: #fff; border: 3px solid #1e3a5f; border-radius: 11px;
+    overflow: hidden; box-shadow: 0 5px 14px rgba(0,0,0,.16); margin-bottom: 14px;
+}
+.alp-banner {
+    display: block; width: 100%; height: clamp(170px, 23vw, 295px);
+    object-fit: cover; object-position: center 30%;
+}
+.alp-card {
+    display: grid !important; grid-template-columns: minmax(0, 34%) minmax(0, 66%) !important;
+    align-items: stretch; width: 100%; min-width: 0; background: #fff;
+}
+.alp-listen-card {
+    border: 2px solid #1e3a5f; border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.12); overflow: hidden;
+}
+.alp-card > * { min-width: 0 !important; }
+.alp-side {
+    display: flex; flex-direction: column; min-width: 0; min-height: 0;
+    background: #10151e; color: #f5f7fa; position: relative;
+}
+.alp-side-title {
+    padding: 19px 18px 15px; background: #182739;
+    border-bottom: 1px solid rgba(255,255,255,.13);
+}
+.alp-label { color: #bed1e6; font-size: .77rem; font-weight: 700; letter-spacing: .07em; margin: 0 0 7px; line-height: 1.4; }
+.alp-side-title h2 { color: #fff; font-size: 1.56rem; font-weight: 700; line-height: 1.18; margin: 0 0 5px; }
+.alp-status { color: #d8e0e8; font-size: .85rem; margin: 0; line-height: 1.4; }
+.alp-hero-shot {
+    display: block; width: 100%; min-width: 0; overflow: hidden;
+    background: #0c1118; line-height: 0; text-decoration: none;
+}
+.alp-hero-shot img {
+    display: block !important; width: 100% !important; max-width: 100% !important;
+    height: 415px !important; min-height: 0 !important; max-height: none !important;
+    object-fit: cover !important; object-position: top left !important;
+    opacity: 1 !important; transform: none !important;
+}
+.alp-scan-shot img { object-fit: contain !important; }
+.alp-listen-shot img { object-position: 0% 0% !important; }
+.alp-shot-note { padding: 11px 16px 18px; margin: 0 !important; font-size: .76rem; line-height: 1.4; color: #c5d3e0; }
+.alp-content {
+    position: relative; isolation: isolate; background: #fff !important;
+    color: #22303c !important; display: flex; flex-direction: column;
+    justify-content: center; min-width: 0; padding: 24px 27px;
+    font-size: 1.02rem; line-height: 1.52; text-align: left;
+}
+.alp-content p { margin: 0 0 13px; }
+.alp-content .alp-lead { font-size: 1.13rem; line-height: 1.42; font-weight: 700; color: #172f4a !important; }
+.alp-tools { color: #435261; }
+.alp-actions { margin-top: 5px; display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-start; }
+.alp-secondary-link { margin-top: 12px; display: inline-block; align-self: flex-start; font-size: .9rem; color: #214a74; }
+.alp-secondary-link:hover { text-decoration: underline; }
+.alp-gallery { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 9px; margin: 3px 0 17px; }
+.alp-gallery a { min-width: 0; display: block; text-decoration: none; color: #fff; border-radius: 7px; overflow: hidden; background: #12151b; border: 1px solid #c1ccd7; }
+.alp-gallery a:hover, .alp-gallery a:focus-visible { border-color: #b18352; }
+.alp-gallery img { display: block; width: 100%; max-width: 100%; height: 112px; min-height: 0; object-fit: contain; background: #0a0d13; opacity: 1; }
+.alp-gallery span { display: block; padding: 7px 8px; color: #fff; background: #20314a; font-size: .75rem; font-weight: 600; line-height: 1.3; }
+@media(max-width: 800px) {
+    .alp-card { grid-template-columns: minmax(0, 1fr) !important; }
+    .alp-banner { height: 175px; }
+    .alp-hero-shot img { height: min(65vw, 400px) !important; }
+    .alp-content { padding: 21px; }
+}
+@media(max-width: 420px) {
+    .alp-side-title { padding: 15px; }
+    .alp-gallery { gap: 6px; }
+    .alp-gallery img { height: 95px; }
+    .alp-gallery span { font-size: .7rem; padding: 5px 6px; }
+}
+</style>
 </head>
 <body>
 
@@ -40,80 +114,56 @@
                 <p class="eyebrow">CURRENT INDEPENDENT DEVELOPMENT</p>
             </div>
 
-            <article class="featured-project-card atomic-scanner-card">
-                <img class="featured-banner" src="images/atomic-lp-banner-wide.png" alt="Vinyl record shelves and audio equipment representing Atomic LP">
-                <div class="atomic-featured-grid">
-                    <div class="atomic-sidebar">
-                        <div class="atomic-sidebar-heading">
-                            <span class="project-date">CURRENT APPLICATION · 2026–PRESENT</span>
-                            <h2>Atomic LP Scanner</h2>
-                            <span class="project-type">Production Web App · Active Development</span>
+            <article class="alp-featured" aria-labelledby="alp-scan-heading">
+                <img class="alp-banner" src="images/atomic-lp-banner-wide.png" alt="Records, turntable, and hi-fi equipment representing AtomicLP">
+                <div class="alp-card">
+                    <aside class="alp-side">
+                        <div class="alp-side-title">
+                            <p class="alp-label">CURRENT APPLICATION · 2026–PRESENT</p>
+                            <h2 id="alp-scan-heading">AtomicLP Scan</h2>
+                            <p class="alp-status">Production Web App · Active Development</p>
                         </div>
-                        <a class="atomic-primary-shot" href="images/atomic-lp-scanner-live.webp" target="_blank" rel="noopener noreferrer" aria-label="View the full live Atomic LP Scanner screenshot">
-                            <img src="images/atomic-lp-scanner-live.webp" width="589" height="828" alt="Atomic LP Scanner displaying barcode, artist, and album search inputs, Shakey Graves release research, and vinyl pressing results" loading="lazy">
+                        <a class="alp-hero-shot alp-scan-shot" href="images/atomic-lp-scanner-live.webp" target="_blank" rel="noopener noreferrer" aria-label="Enlarge AtomicLP Scan production screenshot">
+                            <img src="images/atomic-lp-scanner-live.webp" width="589" height="828" alt="AtomicLP Scan showing a Shakey Graves album search and vinyl pressing results" loading="lazy">
                         </a>
-                        <p class="atomic-shot-caption">Current Scanner interface · select to enlarge</p>
-                    </div>
-                    <div class="featured-project-copy">
-                        <p class="project-lead">Vinyl album identification, release research, marketplace, and collection workflow.</p>
-                        <p>
-                            Full-stack web application for identifying records from barcode, catalog number, artist, or album searches;
-                            resolving plausible album and vinyl-release matches; comparing pressings and marketplace information; and
-                            working with a connected Discogs Collection and WantList.
-                        </p>
-                        <p class="tools"><strong>Key Tools:</strong> Python, Flask, JavaScript, PostgreSQL 18, SQLAlchemy,
-                            REST APIs, JSON, Discogs, MusicBrainz, OAuth, pytest, Gunicorn, Nginx,
-                            Ubuntu Server, Hyper-V, GitHub Actions, Cloudflare Tunnel.</p>
-                        <div class="project-actions">
+                        <p class="alp-shot-note">Production interface · click to enlarge ↗</p>
+                    </aside>
+                    <div class="alp-content">
+                        <p class="alp-lead">Vinyl album identification, release research, marketplace, and collection workflow.</p>
+                        <p>Full-stack web application for identifying records from barcode, catalog number, artist, or album searches; resolving plausible album and vinyl-release matches; comparing pressings and marketplace information; and working with a connected Discogs Collection and WantList.</p>
+                        <p class="alp-tools"><strong>Key Tools:</strong> Python, Flask, JavaScript, PostgreSQL 18, SQLAlchemy, REST APIs, JSON, Discogs, MusicBrainz, OAuth, pytest, Gunicorn, Nginx, Ubuntu Server, Hyper-V, GitHub Actions, Cloudflare Tunnel.</p>
+                        <div class="project-actions alp-actions">
                             <a class="button primary" href="atomic-lp.html">Project Details &amp; Walkthroughs</a>
                             <a class="button" href="https://scan.atomiclp.com/" target="_blank" rel="noopener noreferrer">Launch AtomicLP Scan</a>
                         </div>
-                        <a class="atomic-preview-link" href="atomic-lp.html#interface-preview">View Scanner Interface &rarr;</a>
+                        <a class="alp-secondary-link" href="atomic-lp.html#interface-preview">View Scan Interface &rarr;</a>
                     </div>
                 </div>
             </article>
 
-            <article class="project-row current-prototype atomic-project-card">
-                <div class="atomic-sidebar">
-                    <div class="atomic-sidebar-heading">
-                        <span class="project-date">CURRENT APPLICATION · 2026–PRESENT</span>
-                        <h3>Atomic LP Listener</h3>
-                        <span class="project-type">Working Web App · Active Development</span>
+            <article class="alp-card alp-listen-card" aria-labelledby="alp-listen-heading">
+                <aside class="alp-side">
+                    <div class="alp-side-title">
+                        <p class="alp-label">CURRENT APPLICATION · 2026–PRESENT</p>
+                        <h2 id="alp-listen-heading">AtomicLP Listen</h2>
+                        <p class="alp-status">Working Web App · Active Development</p>
                     </div>
-                    <a class="atomic-primary-shot" href="images/lp-listener-the-cure-neon.webp" target="_blank" rel="noopener noreferrer" aria-label="View the Atomic LP Listener screenshot featuring The Cure">
-                        <img src="images/lp-listener-the-cure-neon.webp" width="1139" height="837" alt="Atomic LP Listener displaying The Cure's Lovesong (Extended Mix), with the Mixed Up album artwork, a neon waveform, and responsive visual effects" loading="lazy">
+                    <a class="alp-hero-shot alp-listen-shot" href="images/lp-listener-the-cure-neon.webp" target="_blank" rel="noopener noreferrer" aria-label="Enlarge AtomicLP Listen visualizer screenshot featuring The Cure">
+                        <img src="images/lp-listener-the-cure-neon.webp" width="1139" height="837" alt="AtomicLP Listen recognizing The Cure's Lovesong (Extended Mix), with album artwork and a neon waveform visualizer" loading="lazy">
                     </a>
-                    <p class="atomic-shot-caption">The Cure · Neon visualizer · select to enlarge</p>
-                </div>
-                <div class="project-details">
-                    <p class="project-lead">Browser-based song recognition paired with interactive, album-aware music visualizations.</p>
-                    <p>
-                        Atomic LP Listener captures a short microphone sample in the browser and uses a Python/Flask backend
-                        with ShazamIO to recognize the recording. It presents the artist, track, album, artwork, and release context,
-                        then brings the album to life with real-time visualizations and configurable effects.
-                    </p>
-                    <p>
-                        The interface includes spectrum, waveform, oscilloscope, and wave-ribbon views, plus controls for color,
-                        responsiveness, background artwork, and visual intensity. Automatic listening and a responsive interface
-                        support a continuous music-discovery experience.
-                    </p>
-                    <p class="tools"><strong>Key Tools:</strong> Python, Flask, JavaScript, Browser Media APIs, ShazamIO,
-                        JSON, pytest, Gunicorn, Nginx, Ubuntu Server, GitHub Actions, Cloudflare Tunnel.</p>
-                    <div class="listener-gallery" aria-label="Atomic LP Listener screenshots">
-                        <a href="images/lp-listener-listening.webp" target="_blank" rel="noopener noreferrer">
-                            <img src="images/lp-listener-listening.webp" alt="Listener capturing audio with an oscilloscope waveform and visual effects controls" width="1392" height="737" loading="lazy">
-                            <span>Listening &amp; Visualizing ↗</span>
-                        </a>
-                        <a href="images/lp-listener-recognized.webp" target="_blank" rel="noopener noreferrer">
-                            <img src="images/lp-listener-recognized.webp" alt="Listener recognizing Tears for Fears with album art and live visualization" width="1015" height="835" loading="lazy">
-                            <span>Recognized Track ↗</span>
-                        </a>
-                        <a href="images/lp-listener-the-cure-neon.webp" target="_blank" rel="noopener noreferrer">
-                            <img src="images/lp-listener-the-cure-neon.webp" alt="Listener playing The Cure with the neon waveform effect" width="1139" height="837" loading="lazy">
-                            <span>The Cure · Neon Visualizer ↗</span>
-                        </a>
+                    <p class="alp-shot-note">The Cure · Neon visualizer · click to enlarge ↗</p>
+                </aside>
+                <div class="alp-content">
+                    <p class="alp-lead">Browser-based song recognition paired with interactive, album-aware music visualizations.</p>
+                    <p>AtomicLP Listen captures a short microphone sample in the browser and uses a Python/Flask backend with ShazamIO to recognize the recording. It presents the artist, track, album, artwork, and release context, then brings the album to life with real-time visualizations and configurable effects.</p>
+                    <p>The interface includes spectrum, waveform, oscilloscope, and wave-ribbon views, plus controls for color, responsiveness, background artwork, and visual intensity. Automatic listening and a responsive interface support a continuous music-discovery experience.</p>
+                    <p class="alp-tools"><strong>Key Tools:</strong> Python, Flask, JavaScript, Browser Media APIs, ShazamIO, JSON, pytest, Gunicorn, Nginx, Ubuntu Server, GitHub Actions, Cloudflare Tunnel.</p>
+                    <div class="alp-gallery" aria-label="AtomicLP Listen screenshots">
+                        <a href="images/lp-listener-listening.webp" target="_blank" rel="noopener noreferrer"><img src="images/lp-listener-listening.webp" alt="Microphone listening and oscilloscope visualization" width="1392" height="737" loading="lazy"><span>Listening &amp; Visualizing ↗</span></a>
+                        <a href="images/lp-listener-recognized.webp" target="_blank" rel="noopener noreferrer"><img src="images/lp-listener-recognized.webp" alt="Tears for Fears recognition with album art and a live visualizer" width="1015" height="835" loading="lazy"><span>Recognized Track ↗</span></a>
+                        <a href="images/lp-listener-the-cure-neon.webp" target="_blank" rel="noopener noreferrer"><img src="images/lp-listener-the-cure-neon.webp" alt="The Cure with the neon waveform effect" width="1139" height="837" loading="lazy"><span>The Cure · Neon Visualizer ↗</span></a>
                     </div>
-                    <div class="project-actions">
+                    <div class="project-actions alp-actions">
                         <a class="button" href="https://listen.atomiclp.com/" target="_blank" rel="noopener noreferrer">Launch AtomicLP Listen</a>
                     </div>
                 </div>

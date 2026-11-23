@@ -233,3 +233,47 @@ main.detail-page > .alp-detail-banner > img {
         max-width: 100%;
     }
 }
+
+
+/* v8: AtomicLP Scan walkthrough images, native aspect ratio and responsive fit. */
+.alp-walkthrough-frame {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: 100%;
+    margin: 0;
+    background: #101b2b;
+    color: #f5f8fb;
+}
+.alp-walkthrough-frame a {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    min-height: 210px;
+    padding: 8px;
+    overflow: hidden;
+}
+.alp-walkthrough-frame img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 370px;
+    object-fit: contain;
+    object-position: center;
+    border: 0;
+}
+.alp-walkthrough-frame figcaption {
+    padding: 8px 12px 10px;
+    color: #d4e0ed;
+    font-size: .77rem;
+    line-height: 1.35;
+    text-align: center;
+    background: #172a42;
+}
+@media (max-width: 760px) {
+    .alp-walkthrough-frame a { min-height: 160px; }
+    .alp-walkthrough-frame img { max-height: 320px; }
+}

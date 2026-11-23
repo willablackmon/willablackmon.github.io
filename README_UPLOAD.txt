@@ -1,35 +1,29 @@
-AtomicLP Portfolio Update v7 — November 22, 2026
+AtomicLP Portfolio — v8 | November 22, 2026
 
-Repository: willablackmon/willablackmon.github.io
-Local working tree: C:\dev\github-io\app
+Updates to atomic-lp.html:
+- Replaced all three Walkthrough placeholders in numerical order (01, 02, 03).
+- Added images/atomic-lp-scan-01.png, -02.png, -03.png.
+- Added responsive styling to atomiclp-portfolio.css.
+- Retained the v7 homepage sidebar and banner fixes and all other portfolio content.
 
-Files to replace in your existing repository:
-  index.html
-  atomic-lp.html
-  atomiclp-portfolio.css
-  images/atomic-lp-scan-st-vincent.webp (same supplied artwork; included to be safe)
+IMPORTANT MEDIA NOTE
+The three uploaded files had .gif names but contain PNG image data, each
+with exactly ONE frame. They are static screenshots, not animated GIFs.
+The package preserves their original image data under correct .png filenames.
+To publish animated walkthroughs, supply real multi-frame GIFs or MP4/WebM;
+the page can then be updated without changing its layout.
 
-IMPORTANT: Preserve the rest of your repo, particularly styles.css and your other images.
-The existing images/atomic-lp-banner-wide.png remains in the repo for atomic-lp.html.
+INSTALL
+Copy contents into C:\dev\github-io\app, preserving the images folder.
+Replace index.html, atomic-lp.html, atomiclp-portfolio.css and the new images.
+Keep all unrelated files, including styles.css and existing images.
 
-Corrections:
-  1. index.html: no AtomicLP banner and no CURRENT INDEPENDENT DEVELOPMENT heading.
-  2. index.html: AtomicLP Scan and AtomicLP Listen sidebars both exactly 34% of card width.
-  3. atomic-lp.html: banner constrained to the same main content width as all sections;
-     shallow 5:1 crop (4:1 on phones), image scales without distortion.
-  4. Stylesheet URL is versioned ?v=20261122-v7 to avoid old CSS from cache.
-  5. Other portfolio cards and Listen gallery are unchanged.
-
-After copying, commit and push from Git Bash:
-  git add index.html atomic-lp.html atomiclp-portfolio.css images/atomic-lp-scan-st-vincent.webp
-  git commit -m "Fix AtomicLP portfolio banner and matching sidebars"
+Git Bash:
+  git add index.html atomic-lp.html atomiclp-portfolio.css images/atomic-lp-scan-01.png images/atomic-lp-scan-02.png images/atomic-lp-scan-03.png
+  git commit -m "Add AtomicLP Scan walkthrough previews in order 01-03"
   git push origin main
 
-Wait for GitHub Pages build to complete successfully, then use Ctrl+Shift+R or
-open the page in a private window. Verify both URLs:
-  https://willablackmon.github.io/
+After GitHub Pages deployment, hard refresh:
   https://willablackmon.github.io/atomic-lp.html
 
-Note: The page shown in prior screenshots may reflect cached HTML/CSS. The
-v6 GitHub main HTML already had the index banner/heading removed, but v7
-explicitly busts the CSS cache and keeps them absent.
+Check screenshot 03 before publishing: it visibly includes account information.

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="atomiclp-portfolio.css">
 <style>
-/* AtomicLP showcase cards v4 — self-contained; unrelated portfolio rows untouched. */
+/* AtomicLP showcase cards v5 — self-contained; unrelated portfolio rows untouched. */
 .alp-featured, .alp-card, .alp-card * { box-sizing: border-box; }
 .alp-featured {
     background: #fff; border: 3px solid #1e3a5f; border-radius: 11px;
@@ -51,6 +51,21 @@
 }
 .alp-scan-shot img { object-fit: contain !important; }
 .alp-listen-shot img { object-position: 0% 0% !important; }
+/* Scan layout: slightly wider screenshot column, with a tighter image viewport.
+   The full uncropped screenshot remains available by clicking the preview. */
+.alp-scan-card {
+    grid-template-columns: minmax(0, 39%) minmax(0, 61%) !important;
+}
+.alp-scan-card .alp-hero-shot img {
+    height: 395px !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+}
+.alp-scan-card .alp-content {
+    justify-content: center;
+    padding: 22px 25px;
+}
+
 .alp-shot-note { padding: 11px 16px 18px; margin: 0 !important; font-size: .76rem; line-height: 1.4; color: #c5d3e0; }
 .alp-content {
     position: relative; isolation: isolate; background: #fff !important;
@@ -73,6 +88,9 @@
     .alp-card { grid-template-columns: minmax(0, 1fr) !important; }
     .alp-banner { height: 175px; }
     .alp-hero-shot img { height: min(65vw, 400px) !important; }
+    .alp-scan-card { grid-template-columns: minmax(0, 1fr) !important; }
+    .alp-scan-card .alp-hero-shot img { height: min(78vw, 480px) !important; }
+    .alp-scan-card .alp-content { padding: 21px; }
     .alp-content { padding: 21px; }
 }
 @media(max-width: 420px) {
@@ -116,7 +134,7 @@
 
             <article class="alp-featured" aria-labelledby="alp-scan-heading">
                 <img class="alp-banner" src="images/atomic-lp-banner-wide.png" alt="Records, turntable, and hi-fi equipment representing AtomicLP">
-                <div class="alp-card">
+                <div class="alp-card alp-scan-card">
                     <aside class="alp-side">
                         <div class="alp-side-title">
                             <p class="alp-label">CURRENT APPLICATION · 2026–PRESENT</p>

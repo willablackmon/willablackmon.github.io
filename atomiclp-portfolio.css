@@ -277,3 +277,105 @@ main.detail-page > .alp-detail-banner > img {
     .alp-walkthrough-frame a { min-height: 160px; }
     .alp-walkthrough-frame img { max-height: 320px; }
 }
+
+
+/* v9 — native looping GIF previews and click-to-enlarge dialog. */
+.alp-walkthrough-frame .alp-walkthrough-trigger {
+    cursor: zoom-in;
+}
+.alp-walkthrough-frame .alp-walkthrough-trigger:hover img,
+.alp-walkthrough-frame .alp-walkthrough-trigger:focus-visible img {
+    outline: 2px solid #cfb37a;
+    outline-offset: -2px;
+}
+.alp-walkthrough-modal {
+    box-sizing: border-box;
+    width: min(96vw, 1300px);
+    max-width: 96vw;
+    max-height: 95dvh;
+    margin: auto;
+    padding: 0;
+    border: 2px solid #b9c8da;
+    border-radius: 12px;
+    background: #0c1522;
+    color: #f7fafc;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, .7);
+    overflow: auto;
+}
+.alp-walkthrough-modal::backdrop {
+    background: rgba(1, 7, 16, .84);
+}
+.alp-walkthrough-modal-head {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    background: #182e4b;
+}
+.alp-walkthrough-modal-head h2 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(.95rem, 2vw, 1.2rem);
+}
+.alp-walkthrough-modal-close {
+    border: 1px solid #b9c8da;
+    border-radius: 6px;
+    background: #fff;
+    color: #102742;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 7px 12px;
+}
+.alp-walkthrough-modal-close:focus-visible {
+    outline: 3px solid #e2be6e;
+    outline-offset: 2px;
+}
+.alp-walkthrough-modal-media {
+    display: grid;
+    place-items: center;
+    padding: 10px;
+    min-height: 100px;
+}
+.alp-walkthrough-modal-media img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: calc(95dvh - 84px);
+    object-fit: contain;
+}
+@media (max-width: 760px) {
+    .alp-walkthrough-modal {
+        max-width: 98vw;
+        width: 98vw;
+        max-height: 96dvh;
+    }
+    .alp-walkthrough-modal-media {padding: 5px;}
+    .alp-walkthrough-modal-media img {max-height: calc(96dvh - 80px);}
+}
+
+
+/* v10 — Move overview into the lead card, ahead of inline walkthroughs. */
+.detail-hero .alp-hero-overview {
+    margin: 17px 0 20px;
+    padding-top: 16px;
+    border-top: 1px solid #d9e1e9;
+}
+.detail-hero .alp-hero-overview h3 {
+    color: #172f4a;
+    font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+    line-height: 1.3;
+    margin: 0 0 13px;
+}
+.detail-hero .alp-hero-overview p {
+    margin: 0 0 13px;
+}
+.detail-hero .alp-hero-overview p:last-child { margin-bottom: 0; }
+.alp-walkthroughs { margin-top: 14px; }
+.alp-walkthroughs .howto-row { align-items: stretch; }
+.alp-walkthroughs .howto-copy { align-self: center; }
+@media (max-width: 760px) {
+    .detail-hero .alp-hero-overview { margin-top: 14px; padding-top: 13px; }
+}

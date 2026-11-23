@@ -6,7 +6,7 @@
     <meta name="description" content="AtomicLP Scan: a working full-stack vinyl identification and release-research application demonstrating practical software architecture, API orchestration, persistence, authentication, testing, and deployment.">
     <title>AtomicLP Scan | Will Blackmon</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="atomiclp-portfolio.css?v=20261122-v8">
+    <link rel="stylesheet" href="atomiclp-portfolio.css?v=20261122-v10">
     <style>
         /* v7 containment fallback, even if a browser has an old stylesheet cached. */
         main.detail-page { width: calc(100% - 20px); max-width: var(--page-width, 1120px); margin-left: auto; margin-right: auto; }
@@ -48,29 +48,66 @@
                     record and narrowing it to the most useful vinyl release information faster. A search can start from
                     a barcode, catalog number, artist, album, or a combination of those inputs.
                 </p>
+                <div class="alp-hero-overview">
+                    <h3>A Real Application Built Around an Ambiguous Data Problem</h3>
+                    <p>
+                    Vinyl research often starts with incomplete or inconsistent evidence: a barcode, catalog number,
+                    partial artist or album text, or packaging that does not uniquely identify a pressing. AtomicLP
+                    Scan turns those imperfect inputs into a structured identification workflow rather than treating
+                    the problem as a simple API lookup.
+                    </p>
+                    <p>
+                    The application coordinates multiple music-data services, builds and ranks candidate album identities,
+                    presents Possible Matches when the evidence is ambiguous, and continues into vinyl-release research only
+                    after an album identity is sufficiently clear or explicitly selected by the user.
+                    </p>
+                </div>
                 <div class="project-actions">
                     <a class="button primary" href="https://scan.atomiclp.com/" target="_blank" rel="noopener noreferrer">Launch AtomicLP Scan</a>
                 </div>
             </div>
         </section>
 
-        <section class="detail-section">
-            <div class="section-heading">
-                <p class="eyebrow">PROJECT OVERVIEW</p>
-                <h2>A Real Application Built Around an Ambiguous Data Problem</h2>
-            </div>
-            <div class="detail-card">
-                <p>
-                    Vinyl research often starts with incomplete or inconsistent evidence: a barcode, catalog number,
-                    partial artist or album text, or packaging that does not uniquely identify a pressing. AtomicLP
-                    Scan turns those imperfect inputs into a structured identification workflow rather than treating
-                    the problem as a simple API lookup.
-                </p>
-                <p>
-                    The application coordinates multiple music-data services, builds and ranks candidate album identities,
-                    presents Possible Matches when the evidence is ambiguous, and continues into vinyl-release research only
-                    after an album identity is sufficiently clear or explicitly selected by the user.
-                </p>
+        <section class="detail-section alp-walkthroughs" aria-label="AtomicLP Scan interface walkthroughs">
+            <div class="howto-list">
+                <article class="howto-row">
+                    <figure class="alp-walkthrough-frame">
+                        <a href="images/atomic-lp-scan-01.gif" class="alp-walkthrough-trigger" data-walkthrough="01" aria-haspopup="dialog" aria-label="Enlarge walkthrough 01 animation">
+                            <img src="images/atomic-lp-scan-01.png" data-animated-src="images/atomic-lp-scan-01.gif" width="1068" height="588" alt="Empty search form with STOP state, possible albums, and collapsed release list" loading="lazy" decoding="async">
+                        </a>
+                        <figcaption>Walkthrough 01 · Identify a Record · click to enlarge ↗</figcaption>
+                    </figure>
+                    <div class="howto-copy">
+                        <h3>Identify a Record</h3>
+                        <p>Start with a barcode, catalog number, artist, or album and follow the search through album identification and Possible Matches when needed.</p>
+                    </div>
+                </article>
+
+                <article class="howto-row">
+                    <figure class="alp-walkthrough-frame">
+                        <a href="images/atomic-lp-scan-02.gif" class="alp-walkthrough-trigger" data-walkthrough="02" aria-haspopup="dialog" aria-label="Enlarge walkthrough 02 animation">
+                            <img src="images/atomic-lp-scan-02.png" data-animated-src="images/atomic-lp-scan-02.gif" width="504" height="728" alt="Barcode and catalog capture controls with an empty album and release view" loading="lazy" decoding="async">
+                        </a>
+                        <figcaption>Walkthrough 02 · Compare Vinyl Releases · click to enlarge ↗</figcaption>
+                    </figure>
+                    <div class="howto-copy">
+                        <h3>Compare Vinyl Releases</h3>
+                        <p>Move from the identified album to vinyl releases, inspect release details, narrow the results, and review marketplace information.</p>
+                    </div>
+                </article>
+
+                <article class="howto-row">
+                    <figure class="alp-walkthrough-frame">
+                        <a href="images/atomic-lp-scan-03.gif" class="alp-walkthrough-trigger" data-walkthrough="03" aria-haspopup="dialog" aria-label="Enlarge walkthrough 03 animation">
+                            <img src="images/atomic-lp-scan-03.png" data-animated-src="images/atomic-lp-scan-03.gif" width="1118" height="670" alt="Connected AtomicLP and Discogs accounts, recognized album, and filtered vinyl releases" loading="lazy" decoding="async">
+                        </a>
+                        <figcaption>Walkthrough 03 · Use Collection &amp; WantList · click to enlarge ↗</figcaption>
+                    </figure>
+                    <div class="howto-copy">
+                        <h3>Use Your Discogs Collection &amp; WantList</h3>
+                        <p>Connect a Discogs account, compare search results with personal library data, and save useful release candidates for later.</p>
+                    </div>
+                </article>
             </div>
         </section>
 
@@ -240,54 +277,17 @@
             </div>
         </section>
 
-        <section class="detail-section">
-            <div class="section-heading">
-                <p class="eyebrow">WALKTHROUGHS</p>
-                <h2>How To Use AtomicLP Scan</h2>
-                <p class="section-copy">Three AtomicLP Scan interface previews, shown in sequence. Select an image to view it at full size.</p>
-            </div>
 
-            <div class="howto-list">
-                <article class="howto-row">
-                    <figure class="alp-walkthrough-frame">
-                        <a href="images/atomic-lp-scan-01.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge walkthrough 01 screenshot">
-                            <img src="images/atomic-lp-scan-01.png" width="1068" height="588" alt="Empty search form with STOP state, possible albums, and collapsed release list" loading="lazy" decoding="async">
-                        </a>
-                        <figcaption>Walkthrough 01 · Identify a Record · select to enlarge ↗</figcaption>
-                    </figure>
-                    <div class="howto-copy">
-                        <h3>Identify a Record</h3>
-                        <p>Start with a barcode, catalog number, artist, or album and follow the search through album identification and Possible Matches when needed.</p>
-                    </div>
-                </article>
-
-                <article class="howto-row">
-                    <figure class="alp-walkthrough-frame">
-                        <a href="images/atomic-lp-scan-02.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge walkthrough 02 screenshot">
-                            <img src="images/atomic-lp-scan-02.png" width="504" height="728" alt="Barcode and catalog capture controls with an empty album and release view" loading="lazy" decoding="async">
-                        </a>
-                        <figcaption>Walkthrough 02 · Compare Vinyl Releases · select to enlarge ↗</figcaption>
-                    </figure>
-                    <div class="howto-copy">
-                        <h3>Compare Vinyl Releases</h3>
-                        <p>Move from the identified album to vinyl releases, inspect release details, narrow the results, and review marketplace information.</p>
-                    </div>
-                </article>
-
-                <article class="howto-row">
-                    <figure class="alp-walkthrough-frame">
-                        <a href="images/atomic-lp-scan-03.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge walkthrough 03 screenshot">
-                            <img src="images/atomic-lp-scan-03.png" width="1118" height="670" alt="Connected AtomicLP and Discogs accounts, recognized album, and filtered vinyl releases" loading="lazy" decoding="async">
-                        </a>
-                        <figcaption>Walkthrough 03 · Use Collection &amp; WantList · select to enlarge ↗</figcaption>
-                    </figure>
-                    <div class="howto-copy">
-                        <h3>Use Your Discogs Collection &amp; WantList</h3>
-                        <p>Connect a Discogs account, compare search results with personal library data, and save useful release candidates for later.</p>
-                    </div>
-                </article>
-            </div>
-        </section>
     </main>
+    <dialog id="alpWalkthroughModal" class="alp-walkthrough-modal" aria-labelledby="alpWalkthroughModalTitle">
+        <div class="alp-walkthrough-modal-head">
+            <h2 id="alpWalkthroughModalTitle">AtomicLP Scan Walkthrough</h2>
+            <button type="button" id="alpWalkthroughModalClose" class="alp-walkthrough-modal-close" aria-label="Close walkthrough">Close &times;</button>
+        </div>
+        <div class="alp-walkthrough-modal-media">
+            <img id="alpWalkthroughModalImage" alt="" decoding="async">
+        </div>
+    </dialog>
+    <script src="atomiclp-walkthrough.js?v=20261122-v10" defer></script>
 </body>
 </html>
